@@ -1,6 +1,4 @@
 import React from 'react';
-import Header from './components/Header';
-import Dashboard from './components/Dashboard';
 import BugType from './components/BugType';
 import DarkType from './components/DarkType';
 import DragonType from './components/DragonType';
@@ -19,32 +17,36 @@ import PsychicType from './components/PsychicType';
 import RockType from './components/RockType';
 import SteelType from './components/SteelType';
 import WaterType from './components/WaterType';
+import Dashboard from './components/Dashboard';
+import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <Dashboard />
-      <BugType />
-      <DarkType />
-      <DragonType />
-      <ElectricType />
-      <FairyType />
-      <FightingType />
-      <FireType />
-      <FlyingType />
-      <GhostType />
-      <GrassType />
-      <GroundType />
-      <IceType />
-      <NormalType />
-      <PoisonType />
-      <PsychicType />
-      <RockType />
-      <SteelType />
-      <WaterType />
-    </div>
+    <Router>
+      <Link className="home-link" to="/home">Home</Link>
+      <Switch>
+        <Route exact path="/home" component={Dashboard} />
+        <Route exact path="/bug-type" component={BugType} />
+        <Route exact path="/dark-type" component={DarkType} />
+        <Route exact path="/dragon-type" component={DragonType} />
+        <Route exact path="/electric-type" component={ElectricType} />
+        <Route exact path="/fairy-type" component={FairyType} />
+        <Route exact path="/fighting-type" component={FightingType} />
+        <Route exact path="/fire-type" component={FireType} />
+        <Route exact path="/flying-type" component={FlyingType} />
+        <Route exact path="/ghost-type" component={GhostType} />
+        <Route exact path="/grass-type" component={GrassType} />
+        <Route exact path="/ground-type" component={GroundType} />
+        <Route exact path="/ice-type" component={IceType} />
+        <Route exact path="/normal-type" component={NormalType} />
+        <Route exact path="/poison-type" component={PoisonType} />
+        <Route exact path="/psychic-type" component={PsychicType} />
+        <Route exact path="/rock-type" component={RockType} />
+        <Route exact path="/steel-type" component={SteelType} />
+        <Route exact path="/water-type" component={WaterType} />
+      </Switch>
+    </Router>
   );
 }
 
