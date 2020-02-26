@@ -1,4 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { getPokemons } from './actions/actions';
+import { connect } from 'react-redux';
+
 import Bug from "../Images/Bug.png";
 import styled from 'styled-components';
 
@@ -7,7 +10,11 @@ const StyledParagraph = styled.p`
   text-align: center;
 `;
 
-const BugType = () => {
+const BugType = props => {
+  useEffect(() => {
+    props.getPokemons();
+  }, []);
+
   return (
     <div>
       <img src={Bug} alt="bug type icon" />
@@ -20,9 +27,22 @@ const BugType = () => {
         but underestimated. However, Bug-type Pokémon are weak to common Fire,
         Flying, and Rock-type moves.
       </StyledParagraph>
+      <div>
+        <h3>pokemon name</h3>
+        <p>Sprites - front_default</p>
+        <p>types:</p>
+        <p>weight:</p>
+        <p>height:</p>
+      </div>
     </div>
   );
 };
 
-export default BugType;
+const mapStateToProps = state => {
+  return {
+    pokemon: state.pokemon
+  };
+};
+
+export default connect(mapStateToProps, { getPokemons })(BugType);
 
