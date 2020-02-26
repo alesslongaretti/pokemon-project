@@ -18,13 +18,22 @@ import RockType from './components/RockType';
 import SteelType from './components/SteelType';
 import WaterType from './components/WaterType';
 import Dashboard from './components/Dashboard';
+
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
+import styled from 'styled-components';
 import './App.css';
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: gray;
+  font-size: 18px;
+  margin-left: 80%;
+`;
 
 function App() {
   return (
-    <Router>
-      <Link className="home-link" to="/home">Home</Link>
+    <Router className="App">
+      <StyledLink className="home-link" to="/home">Home</StyledLink>
       <Switch>
         <Route exact path="/home" component={Dashboard} />
         <Route exact path="/bug-type" component={BugType} />
