@@ -17,10 +17,14 @@ import Psychic from '../Images/Psychic.png';
 import Rock from '../Images/Rock.png';
 import Steel from '../Images/Steel.png';
 import Water from '../Images/Water.png';
+import Pokemons from '../Images/Pokemons.jpeg'
 
 const Dashboard = () => {
     return (
         <div className="dashboard">
+            <div>
+                <img src={Pokemons} alt="pokemons" />
+            </div>
             <img src={Bug} alt="bug type icon" />
             <img src={Dark} alt="dark type icon" />
             <img src={Dragon} alt="dragon type icon" />
