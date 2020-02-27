@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { getPokemons } from './components/actions/actions';
+import { connect } from 'react-redux';
 import BugType from './components/BugType';
 import DarkType from './components/DarkType';
 import DragonType from './components/DragonType';
@@ -30,7 +32,11 @@ const StyledLink = styled(Link)`
   margin-left: 80%;
 `;
 
-function App() {
+const App = props => {
+    useEffect(() => {
+      props.getPokemons();
+    }, []);
+
   return (
     <Router className="App">
       <StyledLink className="home-link" to="/home">Home</StyledLink>
@@ -59,4 +65,10 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    pokemon: state.pokemon
+  };
+};
+
+export default connect(mapStateToProps, { getPokemons })(App);
