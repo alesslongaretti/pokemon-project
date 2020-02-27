@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import { getPokemons } from './actions/actions';
+import React from "react";
 import { connect } from 'react-redux';
 
 import Bug from "../Images/Bug.png";
 import styled from 'styled-components';
+import axios from "axios";
 
 const StyledParagraph = styled.p`
   font-size: 18px;
@@ -11,13 +11,16 @@ const StyledParagraph = styled.p`
 `;
 
 const BugType = props => {
-  useEffect(() => {
-    props.getPokemons();
-  }, []);
+  props.pokemon && props.pokemon.forEach((pokemon) => {
+    axios
+      .get(`${pokemon.url}`)
+      .then(response => {
+        console.log(response)
+      })
+  })
 
   return (
     <div>
-     
       <img src={Bug} alt="bug type icon" />
       <StyledParagraph>
         The Bug type is mostly recognized by having early evolutions, with 3
@@ -43,11 +46,10 @@ const BugType = props => {
 };
 
 const mapStateToProps = state => {
-  console.log(state.pokemon)
   return {
     pokemon: state.pokemon
   };
 };
 
-export default connect(mapStateToProps, { getPokemons })(BugType);
+export default connect(mapStateToProps)(BugType);
 
