@@ -17,6 +17,7 @@ const BugType = props => {
 
   return (
     <div>
+     
       <img src={Bug} alt="bug type icon" />
       <StyledParagraph>
         The Bug type is mostly recognized by having early evolutions, with 3
@@ -27,18 +28,22 @@ const BugType = props => {
         but underestimated. However, Bug-type Pokémon are weak to common Fire,
         Flying, and Rock-type moves.
       </StyledParagraph>
-      <div>
-        <h3>pokemon name</h3>
-        <p>Sprites - front_default</p>
-        <p>types:</p>
-        <p>weight:</p>
-        <p>height:</p>
+      <div> 
+      {props.pokemon && props.pokemon.map(pokemon => (
+        <div key={pokemon.name}>
+         <p>{pokemon.name}</p>
+         <p>{pokemon.url}</p>
+         </div>
+      ))
+      }
+
       </div>
     </div>
   );
 };
 
 const mapStateToProps = state => {
+  console.log(state.pokemon)
   return {
     pokemon: state.pokemon
   };
