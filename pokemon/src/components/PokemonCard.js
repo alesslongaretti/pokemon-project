@@ -12,6 +12,7 @@ const StyledDiv = styled.div`
 
 const StyledImg = styled.img`
     margin: 1%;
+    border-radius: 5px;
 `;
 
 const StyledHeader = styled.h3`
