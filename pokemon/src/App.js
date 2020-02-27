@@ -39,9 +39,9 @@ const App = props => {
 
   return (
     <Router className="App">
-      <StyledLink className="home-link" to="/home">Home</StyledLink>
+      <StyledLink className="home-link" to="/">Home</StyledLink>
       <Switch>
-        <Route exact path="/home" component={Dashboard} />
+        <Route exact path="/" component={Dashboard} />
         <Route exact path="/bug-type" component={BugType} />
         <Route exact path="/dark-type" component={DarkType} />
         <Route exact path="/dragon-type" component={DragonType} />
