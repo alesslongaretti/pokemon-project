@@ -1,6 +1,4 @@
-import React, { useEffect } from 'react';
-import { getPokemons } from './components/actions/actions';
-import { connect } from 'react-redux';
+import React from 'react';
 import BugType from './components/BugType';
 import DarkType from './components/DarkType';
 import DragonType from './components/DragonType';
@@ -20,7 +18,6 @@ import RockType from './components/RockType';
 import SteelType from './components/SteelType';
 import WaterType from './components/WaterType';
 import Dashboard from './components/Dashboard';
-
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 import './App.css';
@@ -32,10 +29,7 @@ const StyledLink = styled(Link)`
   margin-left: 80%;
 `;
 
-const App = props => {
-    useEffect(() => {
-      props.getPokemons();
-    }, []);
+const App = () => {
 
   return (
     <Router className="App">
@@ -65,10 +59,4 @@ const App = props => {
   );
 }
 
-const mapStateToProps = state => {
-  return {
-    pokemon: state.pokemon
-  };
-};
-
-export default connect(mapStateToProps, { getPokemons })(App);
+export default App;
