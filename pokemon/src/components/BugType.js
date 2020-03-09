@@ -1,9 +1,8 @@
-import React from "react";
-import { connect } from 'react-redux';
-
+import React, { useEffect } from "react";
 import Bug from "../Images/Bug.png";
 import styled from 'styled-components';
-import axios from "axios";
+import { connect } from "react-redux";
+import { getPokemons } from "./actions/actions";
 
 const StyledParagraph = styled.p`
   font-size: 18px;
@@ -11,13 +10,9 @@ const StyledParagraph = styled.p`
 `;
 
 const BugType = props => {
-  props.pokemon && props.pokemon.forEach((pokemon) => {
-    axios
-      .get(`${pokemon.url}`)
-      .then(response => {
-        console.log(response)
-      })
-  })
+  useEffect(() => {
+    props.getPokemons();
+  }, [])
 
   return (
     <div>
@@ -48,8 +43,8 @@ const BugType = props => {
 const mapStateToProps = state => {
   return {
     pokemon: state.pokemon
-  };
-};
+  }
+}
 
-export default connect(mapStateToProps)(BugType);
+export default connect(mapStateToProps, { getPokemons })(BugType);
 

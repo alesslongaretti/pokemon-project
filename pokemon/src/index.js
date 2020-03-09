@@ -2,11 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import { Provider } from 'react-redux';
-import { pokemonReducer as reducer } from './components/reducer/reducer';
-import { createStore, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
 import * as serviceWorker from './serviceWorker';
+import { pokemonReducer as reducer } from "./components/reducer/reducer";
+import { createStore, applyMiddleware } from "redux";
+import thunk from "redux-thunk";
+import { Provider } from "react-redux";
 
 const store = createStore(reducer, applyMiddleware(thunk));
 
