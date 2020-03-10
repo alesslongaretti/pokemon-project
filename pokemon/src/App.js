@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import BugType from './components/BugType';
 import DarkType from './components/DarkType';
 import DragonType from './components/DragonType';
@@ -22,6 +22,9 @@ import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 import './App.css';
 
+import { connect } from "react-redux";
+import { getPokemons } from "./components/actions/actions";
+
 const StyledLink = styled(Link)`
   text-decoration: none;
   color: gray;
@@ -29,7 +32,10 @@ const StyledLink = styled(Link)`
   margin-left: 80%;
 `;
 
-const App = () => {
+const App = props => {
+  useEffect(() => {
+    props.getPokemons();
+  }, [])
 
   return (
     <Router className="App">
@@ -59,4 +65,10 @@ const App = () => {
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    pokemon: state.pokemon
+  }
+}
+
+export default connect(mapStateToProps, { getPokemons })(App);

@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Bug from "../Images/Bug.png";
 import styled from 'styled-components';
 import { connect } from "react-redux";
-import { getPokemons } from "./actions/actions";
+import { getData } from "./actions/actions";
 
 const StyledParagraph = styled.p`
   font-size: 18px;
@@ -11,7 +11,7 @@ const StyledParagraph = styled.p`
 
 const BugType = props => {
   useEffect(() => {
-    props.getPokemons();
+    
   }, [])
 
   return (
@@ -46,5 +46,5 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, { getPokemons })(BugType);
+export default connect(mapStateToProps, { getData })(BugType);
 
