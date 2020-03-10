@@ -15,3 +15,16 @@ export const getPokemons = () => dispatch => {
             })
 };
 
+export const getData = (url) => dispatch => {
+    dispatch({ type: GET_POKEMONS_DATA });
+        axios
+            .get(`${url}`)
+            .then(res => {
+                dispatch({ type: GET_POKEMONS, payload: res.data.results })
+                console.log(res.data.results)
+            })
+            .catch(err => {
+                console.log(err);
+            })
+};
+
