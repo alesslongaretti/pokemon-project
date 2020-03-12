@@ -15,13 +15,14 @@ export const getPokemons = () => dispatch => {
             })
 };
 
-export const getData = (url) => dispatch => {
+export const getData = () => dispatch => {
     dispatch({ type: GET_POKEMONS_DATA });
         axios
-            .get(`${url}`)
+            .get("https://pokeapi.co/api/v2/pokemon?limit=151")
             .then(res => {
-                dispatch({ type: GET_POKEMONS, payload: res.data.results })
-                console.log(res.data.results)
+                let pokemonData = res.data.results.map(pokemon => pokemon.url);
+                dispatch({ type: GET_POKEMONS, payload: pokemonData })
+                console.log(pokemonData)
             })
             .catch(err => {
                 console.log(err);

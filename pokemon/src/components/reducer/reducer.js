@@ -1,7 +1,9 @@
 import { GET_POKEMONS } from '../actions/actions';
+import { GET_POKEMONS_DATA } from '../actions/actions';
 
 export const initialState = {
-    pokemon: []
+    pokemon: [],
+    data: []
 };
 
 export const pokemonReducer = (state = initialState, action) => {
@@ -11,6 +13,11 @@ export const pokemonReducer = (state = initialState, action) => {
                 ...state, 
                 pokemon: action.payload
             };
+        case GET_POKEMONS_DATA:
+            return {
+                ...state,
+                data: action.payload
+            }   
         default:
             return state;
     }

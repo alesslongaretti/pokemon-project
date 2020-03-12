@@ -67,7 +67,8 @@ const App = props => {
 
 const mapStateToProps = state => {
   return {
-    pokemon: state.pokemon
+    pokemon: state.pokemon,
+    data: state.data
   }
 }
 

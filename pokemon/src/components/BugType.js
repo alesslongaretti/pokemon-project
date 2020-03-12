@@ -11,7 +11,7 @@ const StyledParagraph = styled.p`
 
 const BugType = props => {
   useEffect(() => {
-    
+    props.getData();
   }, [])
 
   return (
@@ -27,14 +27,12 @@ const BugType = props => {
         Flying, and Rock-type moves.
       </StyledParagraph>
       <div> 
-      {props.pokemon && props.pokemon.map(pokemon => (
-        <div key={pokemon.name}>
+      {props.pokemon && props.pokemon.map((pokemon, i) => (
+        <div key={i}>
          <p>{pokemon.name}</p>
-         <p>{pokemon.url}</p>
          </div>
       ))
       }
-
       </div>
     </div>
   );
@@ -42,7 +40,7 @@ const BugType = props => {
 
 const mapStateToProps = state => {
   return {
-    pokemon: state.pokemon
+    pokemon: state.pokemon,
   }
 }
 
