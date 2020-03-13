@@ -7,25 +7,14 @@ export const getPokemons = () => dispatch => {
         axios
             .get("https://pokeapi.co/api/v2/pokemon?limit=151")
             .then(res => {
-                dispatch({ type: GET_POKEMONS, payload: res.data.results })
-                console.log(res.data.results)
-            })
-            .catch(err => {
-                console.log(err);
-            })
-};
-
-export const getData = () => dispatch => {
-    dispatch({ type: GET_POKEMONS_DATA });
-        axios
-            .get("https://pokeapi.co/api/v2/pokemon?limit=151")
-            .then(res => {
-                let pokemonData = res.data.results.map(pokemon => pokemon.url);
-                dispatch({ type: GET_POKEMONS, payload: pokemonData })
+                let pokemonName = res.data.results.map(item => item.name);
+                dispatch({ type: GET_POKEMONS, payload: pokemonName })
+                console.log(pokemonName)
+                let pokemonData = res.data.results.map(item => item.url);
+                dispatch({ type: GET_POKEMONS_DATA, payload: pokemonData })
                 console.log(pokemonData)
             })
             .catch(err => {
                 console.log(err);
             })
 };
-
