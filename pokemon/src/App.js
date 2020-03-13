@@ -65,10 +65,4 @@ const App = props => {
   );
 }
 
-const mapStateToProps = state => {
-  return {
-    pokemon: state.pokemon
-  }
-}
-
-export default connect(mapStateToProps, { getPokemons })(App);
+export default connect(null, { getPokemons })(App);

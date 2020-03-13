@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import Bug from "../Images/Bug.png";
 import styled from 'styled-components';
 import { connect } from "react-redux";
-import { getData } from "./actions/actions";
 
 const StyledParagraph = styled.p`
   font-size: 18px;
@@ -11,7 +10,7 @@ const StyledParagraph = styled.p`
 
 const BugType = props => {
   useEffect(() => {
-    
+  
   }, [])
 
   return (
@@ -27,24 +26,23 @@ const BugType = props => {
         Flying, and Rock-type moves.
       </StyledParagraph>
       <div> 
-      {props.pokemon && props.pokemon.map(pokemon => (
-        <div key={pokemon.name}>
-         <p>{pokemon.name}</p>
-         <p>{pokemon.url}</p>
+      {props.pokemonName && props.pokemonName.map(pokemon => (
+        <div key={pokemon}>
+         <p>{pokemon}</p>
          </div>
       ))
       }
-
       </div>
     </div>
   );
 };
 
 const mapStateToProps = state => {
+  console.log(state)
   return {
-    pokemon: state.pokemon
+    pokemonName: state.pokemonName
   }
 }
 
-export default connect(mapStateToProps, { getData })(BugType);
+export default connect(mapStateToProps, {})(BugType);
 
