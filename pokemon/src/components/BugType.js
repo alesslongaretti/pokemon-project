@@ -26,12 +26,12 @@ const BugType = props => {
         Flying, and Rock-type moves.
       </StyledParagraph>
       <div> 
-      {props.pokemonName && props.pokemonName.map(pokemon => (
+      {/* {props.pokemonData && props.pokemonData.map(pokemon => (
         <div key={pokemon}>
          <p>{pokemon}</p>
          </div>
       ))
-      }
+      } */}
       </div>
     </div>
   );
@@ -40,7 +40,7 @@ const BugType = props => {
 const mapStateToProps = state => {
   console.log(state)
   return {
-    pokemonName: state.pokemonName
+    pokemonData: state.pokemonData
   }
 }
 
