@@ -21,8 +21,8 @@ export const pokemonReducer = (state = initialState, action) => {
         case GET_POKEMONS_DATA:
             return {
                 ...state,
-                pokemonData: action.payload
-            }    
+                pokemonData: [...state.pokemonData, action.payload]
+            }   
         default:
             return state;
     }
