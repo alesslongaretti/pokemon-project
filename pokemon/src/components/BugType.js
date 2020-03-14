@@ -34,15 +34,17 @@ const BugType = props => {
           props.pokemonData.map((pokemon, i) => {
             return (
               <div key={i}>
-                <h3 className="pokemon-name">{pokemon.name}</h3>
-                <img src={pokemon.picture} alt={"pokemon"}/>
-                <p>Height: {pokemon.height}m</p>
-                <p>Weight: {pokemon.weight}kg</p>
-                <p>Type:
                 {pokemon.types.map((type, i) => {
+                  if (type.type.name.includes("bug")) {
                   return (
-                  <span key={i}>{" "+ type.type.name +" "}</span>
-                )})}</p>
+                  <div key={i}>
+                    <h3>{pokemon.name}</h3>
+                    <img src={pokemon.picture} alt="pokemon" />
+                    <p>Height: {pokemon.height}</p>
+                    <p>Weight: {pokemon.weight}</p>
+                    <p>Type: {type.type.name}</p>
+                    </div>
+                )}})}
               </div>
             );
           })}
