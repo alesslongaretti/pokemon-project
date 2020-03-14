@@ -13,9 +13,9 @@ export const getPokemons = () => dispatch => {
                 axios.get(`${url}`)
                 .then(res => {
                     let pokemonData = res.data;
-                    dispatch({ type: GET_POKEMONS_DATA, payload: ({ name: pokemonData.name, picture: pokemonData.sprites.front_default, height: pokemonData.height })  
+                    dispatch({ type: GET_POKEMONS_DATA, payload: ({ name: pokemonData.name, picture: pokemonData.sprites.front_default, height: pokemonData.height, weight: pokemonData.weight, types: pokemonData.types })  
                 })
-                    console.log(pokemonData.sprites.front_default)
+                    console.log(pokemonData.types)
             })
             })
             })
