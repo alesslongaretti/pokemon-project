@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import BugType from './components/BugType';
-import DarkType from './components/DarkType';
 import DragonType from './components/DragonType';
 import ElectricType from './components/ElectricType';
 import FairyType from './components/FairyType';
@@ -43,7 +42,6 @@ const App = props => {
       <Switch>
         <Route exact path="/" component={Dashboard} />
         <Route exact path="/bug-type" component={BugType} />
-        <Route exact path="/dark-type" component={DarkType} />
         <Route exact path="/dragon-type" component={DragonType} />
         <Route exact path="/electric-type" component={ElectricType} />
         <Route exact path="/fairy-type" component={FairyType} />
