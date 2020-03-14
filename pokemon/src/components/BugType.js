@@ -10,6 +10,10 @@ const StyledParagraph = styled.p`
   text-align: center;
 `;
 
+const StyledBugTitle = styled.h3`
+text-transform: capitalize;
+`;
+
 const BugType = props => {
   useEffect(() => {
     props.getPokemons();
@@ -28,15 +32,24 @@ const BugType = props => {
         but underestimated. However, Bug-type Pokémon are weak to common Fire,
         Flying, and Rock-type moves.
       </StyledParagraph>
-      <div> 
-      {props.pokemon && props.pokemon.map(pokemon => (
-        <div key={pokemon.name}>
-         <p>{pokemon.name}</p>
-         <p>{pokemon.url}</p>
-         </div>
-      ))
-      }
-
+      <div>
+        {props.pokemonData &&
+          props.pokemonData.map((pokemon, i) => {
+            return (
+              <div key={i}>
+                {pokemon.types.map((type, i) => {
+                  if (type.type.name.includes("bug")) {
+                  return (
+                  <div key={i}>
+                    <StyledBugTitle>{pokemon.name}</StyledBugTitle>
+                    <img src={pokemon.picture} alt="pokemon" />
+                    <p>Height: {pokemon.height}</p>
+                    <p>Weight: {pokemon.weight}</p>
+                    </div>
+                )}})}
+              </div>
+            );
+          })}
       </div>
     </div>
   );
