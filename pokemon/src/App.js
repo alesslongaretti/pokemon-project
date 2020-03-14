@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import BugType from './components/BugType';
 import DarkType from './components/DarkType';
 import DragonType from './components/DragonType';
@@ -18,10 +18,12 @@ import RockType from './components/RockType';
 import SteelType from './components/SteelType';
 import WaterType from './components/WaterType';
 import Dashboard from './components/Dashboard';
-
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 import './App.css';
+
+import { connect } from "react-redux";
+import { getPokemons } from "./components/actions/actions";
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -30,12 +32,16 @@ const StyledLink = styled(Link)`
   margin-left: 80%;
 `;
 
-function App() {
+const App = props => {
+  useEffect(() => {
+    props.getPokemons();
+  }, [])
+
   return (
     <Router className="App">
-      <StyledLink className="home-link" to="/home">Home</StyledLink>
+      <StyledLink className="home-link" to="/">Home</StyledLink>
       <Switch>
-        <Route exact path="/home" component={Dashboard} />
+        <Route exact path="/" component={Dashboard} />
         <Route exact path="/bug-type" component={BugType} />
         <Route exact path="/dark-type" component={DarkType} />
         <Route exact path="/dragon-type" component={DragonType} />
@@ -59,4 +65,4 @@ function App() {
   );
 }
 
-export default App;
+export default connect(null, { getPokemons })(App);
