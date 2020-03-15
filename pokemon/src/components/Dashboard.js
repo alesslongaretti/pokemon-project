@@ -42,8 +42,13 @@ const StyledLink = styled(Link)`
     min-width: 11vw;
 `;
 
-const StyledPokemonsTitle = styled.h3`
+const StyledName = styled.h3`
 text-transform: capitalize;
+`;
+
+const StyledType = styled.span`
+text-transform: capitalize;
+margin-right: 2px;
 `;
 
 const Dashboard = (props) => {
@@ -118,14 +123,14 @@ const Dashboard = (props) => {
           props.pokemonData.map((pokemon, i) => {
             return (
               <div key={i}>
-                <StyledPokemonsTitle>{pokemon.name}</StyledPokemonsTitle>
+                <StyledName>{pokemon.name}</StyledName>
                 <img src={pokemon.picture} alt="pokemon" />
-                <p>Height: {pokemon.height}</p>
-                <p>Weight: {pokemon.weight}</p>
+                <p>Height: {((pokemon.height/ 10).toFixed(1))}m</p>
+                <p>Weight: {((pokemon.weight/ 10).toFixed(1))}Kg</p>
                 <p>Type:
                       {pokemon.types.map((type, i) => {
                   return (
-                    <span key={i}>{" " + type.type.name + " "}</span>
+                    <StyledType key={i}>{" " + type.type.name + " "}</StyledType>
                   )
                 })}</p>
               </div>
