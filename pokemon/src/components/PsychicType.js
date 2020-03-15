@@ -1,15 +1,63 @@
-import React from 'react';
-import Psychic from '../Images/Psychic.png';
+import React from "react";
+import Psychic from "../Images/Psychic.png";
+import styled from "styled-components";
+import { connect } from "react-redux";
 
-const PsychicType = () => {
-    return (
-        <div>
-            <img src={Psychic} alt="Psychic type icon" />
-            <p>
-            Psychic-type attacks are super effective against Fighting-type and Poison-type Pokémon. However, they have no effect on Dark-type Pokémon. It was the most dominant type in the earliest Pokémon games due to broken mechanics and coding errors, and even with the error fixed, the Special Attack stats of Psychic-type Pokémon are still not to be underestimated.
-            </p>
-        </div>
-    )
-}
+const StyledParagraph = styled.p`
+  font-size: 18px;
+  text-align: center;
+`;
 
-export default PsychicType;
+const StyledName = styled.h3`
+  text-transform: capitalize;
+`;
+
+const PsychicType = props => {
+  if (props.pokemonData[0] === undefined) {
+    props.pokemonData.splice(0);
+  }
+
+  return (
+    <div>
+      <img src={Psychic} alt="psychic type icon" />
+      <StyledParagraph>
+        Psychic-type attacks are super effective against Fighting-type and
+        Poison-type Pokémon. However, they have no effect on Dark-type Pokémon.
+        It was the most dominant type in the earliest Pokémon games due to
+        broken mechanics and coding errors, and even with the error fixed, the
+        Special Attack stats of Psychic-type Pokémon are still not to be
+        underestimated.
+      </StyledParagraph>
+      <div>
+        {props.pokemonData &&
+          props.pokemonData.map((pokemon, i) => {
+            return (
+              <div key={i}>
+                {pokemon.types.map((type, i) => {
+                  if (type.type.name.includes("psychic")) {
+                    return (
+                      <div key={i}>
+                        <StyledName>{pokemon.name}</StyledName>
+                        <img src={pokemon.picture} alt="pokemon" />
+                        <p>Height: {pokemon.height}</p>
+                        <p>Weight: {pokemon.weight}</p>
+                      </div>
+                    );
+                  }
+                })}
+              </div>
+            );
+          })}
+      </div>
+    </div>
+  );
+};
+
+const mapStateToProps = state => {
+  console.log(state);
+  return {
+    pokemonData: state.pokemonData
+  };
+};
+
+export default connect(mapStateToProps, {})(PsychicType);

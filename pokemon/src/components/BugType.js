@@ -1,6 +1,6 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Bug from "../Images/Bug.png";
-import styled from 'styled-components';
+import styled from "styled-components";
 import { connect } from "react-redux";
 
 const StyledParagraph = styled.p`
@@ -8,17 +8,13 @@ const StyledParagraph = styled.p`
   text-align: center;
 `;
 
-const StyledBugTitle = styled.h3`
-text-transform: capitalize;
+const StyledName = styled.h3`
+  text-transform: capitalize;
 `;
 
 const BugType = props => {
-  useEffect(() => {
-  
-  }, [])
-
   if (props.pokemonData[0] === undefined) {
-    props.pokemonData.splice(0)
+    props.pokemonData.splice(0);
   }
 
   return (
@@ -40,14 +36,16 @@ const BugType = props => {
               <div key={i}>
                 {pokemon.types.map((type, i) => {
                   if (type.type.name.includes("bug")) {
-                  return (
-                  <div key={i}>
-                    <StyledBugTitle>{pokemon.name}</StyledBugTitle>
-                    <img src={pokemon.picture} alt="pokemon" />
-                    <p>Height: {pokemon.height}</p>
-                    <p>Weight: {pokemon.weight}</p>
-                    </div>
-                )}})}
+                    return (
+                      <div key={i}>
+                        <StyledName>{pokemon.name}</StyledName>
+                        <img src={pokemon.picture} alt="pokemon" />
+                        <p>Height: {pokemon.height}</p>
+                        <p>Weight: {pokemon.weight}</p>
+                      </div>
+                    );
+                  }
+                })}
               </div>
             );
           })}
@@ -57,10 +55,10 @@ const BugType = props => {
 };
 
 const mapStateToProps = state => {
-  console.log(state)
+  console.log(state);
   return {
     pokemonData: state.pokemonData
-  }
-}
+  };
+};
 
 export default connect(mapStateToProps, {})(BugType);
