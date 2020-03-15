@@ -8,6 +8,10 @@ const StyledParagraph = styled.p`
   text-align: center;
 `;
 
+const StyledBugTitle = styled.h3`
+text-transform: capitalize;
+`;
+
 const BugType = props => {
   useEffect(() => {
   
@@ -38,11 +42,10 @@ const BugType = props => {
                   if (type.type.name.includes("bug")) {
                   return (
                   <div key={i}>
-                    <h3>{pokemon.name}</h3>
+                    <StyledBugTitle>{pokemon.name}</StyledBugTitle>
                     <img src={pokemon.picture} alt="pokemon" />
                     <p>Height: {pokemon.height}</p>
                     <p>Weight: {pokemon.weight}</p>
-                    <p>Type: {type.type.name}</p>
                     </div>
                 )}})}
               </div>

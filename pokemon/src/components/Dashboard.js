@@ -1,6 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Bug from "../Images/Bug.png";
-import Dark from '../Images/Dark.png';
 import Dragon from '../Images/Dragon.png';
 import Electric from '../Images/Electric.png';
 import Fairy from '../Images/Fairy.png';
@@ -18,7 +17,7 @@ import Rock from '../Images/Rock.png';
 import Steel from '../Images/Steel.png';
 import Water from '../Images/Water.png';
 import PokemonHeader from '../Images/PokemonHeader.jpg';
-
+import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import styled from 'styled-components';
 
@@ -43,7 +42,19 @@ const StyledLink = styled(Link)`
     min-width: 11vw;
 `;
 
-const Dashboard = () => {
+const StyledPokemonsTitle = styled.h3`
+text-transform: capitalize;
+`;
+
+const Dashboard = (props) => {
+  useEffect(() => {
+
+  }, [])
+
+  if (props.pokemonData[0] === undefined) {
+    props.pokemonData.splice(0)
+  }
+
   return (
     <StyledDiv className="headers">
       <h1>Welcome To The Pokemon Database!</h1>
@@ -52,9 +63,6 @@ const Dashboard = () => {
       <StyledLinksDiv>
         <StyledLink className="link" to="/bug-type">
           <img src={Bug} alt="bug type icon" />
-        </StyledLink>
-        <StyledLink className="link" to="/dark-type">
-          <img src={Dark} alt="dark type icon" />
         </StyledLink>
         <StyledLink className="link" to="/dragon-type">
           <img src={Dragon} alt="dragon type icon" />
@@ -105,8 +113,34 @@ const Dashboard = () => {
           <img src={Water} alt="water type icon" />
         </StyledLink>
       </StyledLinksDiv>
+      <div>
+        {props.pokemonData &&
+          props.pokemonData.map((pokemon, i) => {
+            return (
+              <div key={i}>
+                <StyledPokemonsTitle>{pokemon.name}</StyledPokemonsTitle>
+                <img src={pokemon.picture} alt="pokemon" />
+                <p>Height: {pokemon.height}</p>
+                <p>Weight: {pokemon.weight}</p>
+                <p>Type:
+                      {pokemon.types.map((type, i) => {
+                  return (
+                    <span key={i}>{" " + type.type.name + " "}</span>
+                  )
+                })}</p>
+              </div>
+            )
+          })}
+      </div>
     </StyledDiv>
   );
 };
 
-export default Dashboard;
+const mapStateToProps = state => {
+  console.log(state)
+  return {
+    pokemonData: state.pokemonData
+  }
+}
+
+export default connect(mapStateToProps, {})(Dashboard);
