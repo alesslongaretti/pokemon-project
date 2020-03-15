@@ -17,6 +17,7 @@ import RockType from './components/RockType';
 import SteelType from './components/SteelType';
 import WaterType from './components/WaterType';
 import Dashboard from './components/Dashboard';
+import SearchByType from './components/SearchByType';
 import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
 import styled from 'styled-components';
 import './App.css';
@@ -28,7 +29,7 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   color: gray;
   font-size: 18px;
-  margin-left: 80%;
+  margin: 5%;
 `;
 
 const App = props => {
@@ -39,8 +40,10 @@ const App = props => {
   return (
     <Router className="App">
       <StyledLink className="home-link" to="/">Home</StyledLink>
+      <StyledLink className="type-link" to="/types">Types</StyledLink>
       <Switch>
         <Route exact path="/" component={Dashboard} />
+        <Route exact path="/types" component={SearchByType} />
         <Route exact path="/bug-type" component={BugType} />
         <Route exact path="/dragon-type" component={DragonType} />
         <Route exact path="/electric-type" component={ElectricType} />

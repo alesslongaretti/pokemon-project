@@ -1,6 +1,4 @@
 import axios from 'axios';
-// export const GET_POKEMONS = "GET_POKEMONS";
-// export const GET_POKEMONS_URL = "GET_POKEMONS_URL";
 export const GET_POKEMONS_DATA = "GET_POKEMONS_DATA";
 
 export const getPokemons = () => dispatch => {
@@ -15,7 +13,6 @@ export const getPokemons = () => dispatch => {
                     let pokemonData = res.data;
                     dispatch({ type: GET_POKEMONS_DATA, payload: ({ name: pokemonData.name, picture: pokemonData.sprites.front_default, height: pokemonData.height, weight: pokemonData.weight, types: pokemonData.types })  
                 })
-                    console.log(pokemonData.types)
             })
             })
             })
@@ -23,16 +20,3 @@ export const getPokemons = () => dispatch => {
                 console.log(err);
             })
 };
-
-// export const getPokemonData = (url) => dispatch => {
-//     dispatch({ type: GET_POKEMONS_DATA });
-//     axios
-//         .get(`${url}`)
-//         .then(res => {
-//             dispatch({ type: GET_POKEMONS_DATA, payload: res})
-//             console.log(res)
-//         })
-//         .catch(err => {
-//             console.log(err);
-//         })
-// };
