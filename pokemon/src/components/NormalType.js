@@ -39,8 +39,8 @@ const NormalType = props => {
                       <div key={i}>
                         <StyledName>{pokemon.name}</StyledName>
                         <img src={pokemon.picture} alt="pokemon" />
-                        <p>Height: {pokemon.height}</p>
-                        <p>Weight: {pokemon.weight}</p>
+                        <p>Height: {((pokemon.height/ 10).toFixed(1))}m</p>
+                        <p>Weight: {((pokemon.weight/ 10).toFixed(1))}Kg</p>
                       </div>
                     );
                   }
