@@ -12,6 +12,13 @@ const StyledName = styled.h3`
   text-transform: capitalize;
 `;
 
+const StyledIcon = styled.img`
+  width: 20%;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
+`;
+
 const RockType = props => {
   if (props.pokemonData[0] === undefined) {
     props.pokemonData.splice(0);
@@ -19,7 +26,7 @@ const RockType = props => {
 
   return (
     <div>
-      <img src={Rock} alt="rock type icon" />
+      <StyledIcon src={Rock} alt="rock type icon" />
       <StyledParagraph>
         Rock-type Pokémon are mostly slow and heavily rely on their Physical
         Attack and Defense stats, but with the glaring weaknesses to mostly

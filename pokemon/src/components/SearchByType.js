@@ -2,7 +2,7 @@ import React from "react";
 import Bug from "../Images/Bug.png";
 import Dragon from "../Images/Dragon.png";
 import Electric from "../Images/Electric.png";
-import Fairy from "../Images/Fairy.png";
+import Fairy from "../Images/Fairy.webp";
 import Fighting from "../Images/Fighting.png";
 import Fire from "../Images/Fire.png";
 import Flying from "../Images/Flying.png";
@@ -25,15 +25,20 @@ const StyledDiv = styled.div`
 
 const StyledLinksDiv = styled.div`
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  justify-content: space-around;
   margin: 5% 0%;
+  flex-wrap: wrap;
 `;
 
 const StyledLink = styled(Link)`
-  align-items: ;
-  margin: 1% 1%;
-  min-width: 11vw;
+  margin: 3%;
+`;
+
+const StyledIcon = styled.img`
+  width: 12vw;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
 `;
 
 const SearchByType = () => {
@@ -42,55 +47,55 @@ const SearchByType = () => {
       <h2>Search Pokemons By Type:</h2>
       <StyledLinksDiv>
         <StyledLink className="link" to="/bug-type">
-          <img src={Bug} alt="bug type icon" />
+          <StyledIcon src={Bug} alt="bug type icon" />
         </StyledLink>
         <StyledLink className="link" to="/dragon-type">
-          <img src={Dragon} alt="dragon type icon" />
+          <StyledIcon src={Dragon} alt="dragon type icon" />
         </StyledLink>
         <StyledLink className="link" to="/electric-type">
-          <img src={Electric} alt="electric type icon" />
+          <StyledIcon src={Electric} alt="electric type icon" />
         </StyledLink>
         <StyledLink className="link" to="/fairy-type">
-          <img src={Fairy} alt="fairy type icon" />
+          <StyledIcon src={Fairy} alt="fairy type icon" />
         </StyledLink>
         <StyledLink className="link" to="/fighting-type">
-          <img src={Fighting} alt="fighting type icon" />
+          <StyledIcon src={Fighting} alt="fighting type icon" />
         </StyledLink>
         <StyledLink className="link" to="/fire-type">
-          <img src={Fire} alt="fire type icon" />
+          <StyledIcon src={Fire} alt="fire type icon" />
         </StyledLink>
         <StyledLink className="link" to="/flying-type">
-          <img src={Flying} alt="flying type icon" />
+          <StyledIcon src={Flying} alt="flying type icon" />
         </StyledLink>
         <StyledLink className="link" to="/ghost-type">
-          <img src={Ghost} alt="ghost type icon" />
+          <StyledIcon src={Ghost} alt="ghost type icon" />
         </StyledLink>
         <StyledLink className="link" to="/grass-type">
-          <img src={Grass} alt="grass type icon" />
+          <StyledIcon src={Grass} alt="grass type icon" />
         </StyledLink>
         <StyledLink className="link" to="/ground-type">
-          <img src={Ground} alt="ground type icon" />
+          <StyledIcon src={Ground} alt="ground type icon" />
         </StyledLink>
         <StyledLink className="link" to="/ice-type">
-          <img src={Ice} alt="Ice type icon" />
+          <StyledIcon src={Ice} alt="Ice type icon" />
         </StyledLink>
         <StyledLink className="link" to="/normal-type">
-          <img src={Normal} alt="normal type icon" />
+          <StyledIcon src={Normal} alt="normal type icon" />
         </StyledLink>
         <StyledLink className="link" to="/poison-type">
-          <img src={Poison} alt="poison type icon" />
+          <StyledIcon src={Poison} alt="poison type icon" />
         </StyledLink>
         <StyledLink className="link" to="/psychic-type">
-          <img src={Psychic} alt="psychic type icon" />
+          <StyledIcon src={Psychic} alt="psychic type icon" />
         </StyledLink>
         <StyledLink className="link" to="/rock-type">
-          <img src={Rock} alt="rock type icon" />
+          <StyledIcon src={Rock} alt="rock type icon" />
         </StyledLink>
         <StyledLink className="link" to="/steel-type">
-          <img src={Steel} alt="steel type icon" />
+          <StyledIcon src={Steel} alt="steel type icon" />
         </StyledLink>
         <StyledLink className="link" to="/water-type">
-          <img src={Water} alt="water type icon" />
+          <StyledIcon src={Water} alt="water type icon" />
         </StyledLink>
       </StyledLinksDiv>
     </StyledDiv>

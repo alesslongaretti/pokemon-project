@@ -12,6 +12,13 @@ const StyledName = styled.h3`
   text-transform: capitalize;
 `;
 
+const StyledIcon = styled.img`
+  width: 20%;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
+`;
+
 const NormalType = props => {
   if (props.pokemonData[0] === undefined) {
     props.pokemonData.splice(0);
@@ -19,7 +26,7 @@ const NormalType = props => {
 
   return (
     <div>
-      <img src={Normal} alt="normal type icon" />
+      <StyledIcon src={Normal} alt="normal type icon" />
       <StyledParagraph>
         Normal-type Pokémon usually have moves based on standard attacks, such
         as tackles and scratches, but they may also possess some powerful moves

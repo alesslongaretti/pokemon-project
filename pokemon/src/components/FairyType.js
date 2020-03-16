@@ -1,5 +1,5 @@
 import React from "react";
-import Fairy from "../Images/Fairy.png";
+import Fairy from "../Images/Fairy.webp";
 import styled from 'styled-components';
 import { connect } from "react-redux";
 
@@ -12,6 +12,13 @@ const StyledName = styled.h3`
 text-transform: capitalize;
 `;
 
+const StyledIcon = styled.img`
+  width: 20%;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
+`;
+
 const FairyType = props => {
 
   if (props.pokemonData[0] === undefined) {
@@ -20,7 +27,7 @@ const FairyType = props => {
 
   return (
     <div>
-      <img src={Fairy} alt="fairy type icon" />
+      <StyledIcon src={Fairy} alt="fairy type icon" />
       <StyledParagraph>
       To turn the tides for the everlasting domination of the Dragon-type
         Pokémon, the Fairy type was added to balance the meta. Fairy-type

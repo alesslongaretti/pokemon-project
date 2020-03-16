@@ -12,13 +12,20 @@ const StyledName = styled.h3`
   text-transform: capitalize;
 `;
 
+const StyledIcon = styled.img`
+  width: 20%;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
+`;
+
 const PoisonType = props => {
   if (props.pokemonData[0] === undefined) {
     props.pokemonData.splice(0);
   }
   return (
     <div>
-      <img src={Poison} alt="Poison type icon" />
+      <StyledIcon src={Poison} alt="Poison type icon" />
       <StyledParagraph>
         Poison-type Pokémon, with their moves being only super effective against
         Grass-type and the newly-introduced Fairy-type Pokémon, are mostly used

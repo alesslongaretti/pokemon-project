@@ -12,6 +12,13 @@ const StyledName = styled.h3`
 text-transform: capitalize;
 `;
 
+const StyledIcon = styled.img`
+  width: 20%;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
+`;
+
 const DragonType = props => {
 
   if (props.pokemonData[0] === undefined) {
@@ -20,7 +27,7 @@ const DragonType = props => {
 
   return (
     <div>
-      <img src={Dragon} alt="dragon type icon" />
+      <StyledIcon src={Dragon} alt="dragon type icon" />
       <StyledParagraph>
         Dragon-type moves are only super effective against its own type, yet
         Dragon-type Pokémon have powerful stats to compensate. However, most
