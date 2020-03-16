@@ -1,5 +1,5 @@
 import React from "react";
-import PokemonHeader from '../Images/PokemonHeader.jpg';
+import PokemonLogo from '../Images/PokemonLogo.png';
 import { connect } from "react-redux";
 import styled from 'styled-components';
 
@@ -8,7 +8,11 @@ const StyledDiv = styled.div`
 `;
 
 const StyledImg = styled.img`
-    max-width: 80vw;
+    align-item: center;
+    width: 80%;
+    margin: -70px -40px -70px -70px;
+    -webkit-filter: drop-shadow(5px 5px 10px #000000); 
+    filter: drop-shadow(5px 5px 10px #000000);
 `;
 
 const StyledName = styled.h3`
@@ -29,7 +33,7 @@ const Dashboard = (props) => {
   return (
     <StyledDiv className="headers">
       <h1>Welcome To The Pokemon Database!</h1>
-      <StyledImg src={PokemonHeader} alt="pokemons" />
+      <StyledImg src={PokemonLogo} alt="pokemons" />
       <div>
         {props.pokemonData &&
           props.pokemonData.map((pokemon, i) => {

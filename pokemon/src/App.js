@@ -27,7 +27,9 @@ import { getPokemons } from "./components/actions/actions";
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: gray;
+  color: #FFDE00;
+  text-shadow: -1px -1px #3B4CCA, 1px -1px #3B4CCA, -1px 1px #3B4CCA, 1px 1px #3B4CCA;
+  -webkit-filter: drop-shadow(1px 1px 2px #000); filter: drop-shadow(1px 1px 2px #000);
   font-size: 18px;
   margin: 5%;
 `;
