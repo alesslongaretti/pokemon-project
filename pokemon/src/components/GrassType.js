@@ -12,6 +12,13 @@ const StyledName = styled.h3`
 text-transform: capitalize;
 `;
 
+const StyledIcon = styled.img`
+  width: 20%;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
+`;
+
 const GrassType = props => {
 
     if (props.pokemonData[0] === undefined) {
@@ -20,7 +27,7 @@ const GrassType = props => {
 
     return (
         <div>
-            <img src={Grass} alt="grass type icon" />
+            <StyledIcon src={Grass} alt="grass type icon" />
             <StyledParagraph>
                 The Grass type is a type that has its own strength hindered by many weaknesses, reflecting the fragility of nature. The moves of this type are super effective against Water, Ground, and Rock-type Pokémon, but Grass-type Pokémon are weak to attacks from the following 5 types: Fire, Flying, Bug, Ice and Poison.
             </StyledParagraph>

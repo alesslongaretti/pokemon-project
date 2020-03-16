@@ -12,6 +12,13 @@ const StyledName = styled.h3`
 text-transform: capitalize;
 `;
 
+const StyledIcon = styled.img`
+  width: 20%;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
+`;
+
 const FlyingType = props => {
 
   if (props.pokemonData[0] === undefined) {
@@ -20,7 +27,7 @@ const FlyingType = props => {
 
   return (
     <div>
-      <img src={Flying} alt="flying type icon" />
+      <StyledIcon src={Flying} alt="flying type icon" />
       <StyledParagraph>
         Flying-type Pokémon are usually Pokémon that fly or resemble birds, so
         they are immune to Ground-type attacks, But weak to Rock, Ice and

@@ -12,6 +12,13 @@ const StyledName = styled.h3`
 text-transform: capitalize;
 `;
 
+const StyledIcon = styled.img`
+  width: 20%;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
+`;
+
 const FireType = props => {
 
   if (props.pokemonData[0] === undefined) {
@@ -20,7 +27,7 @@ const FireType = props => {
 
   return (
     <div>
-      <img src={Fire} alt="fire type icon" />
+      <StyledIcon src={Fire} alt="fire type icon" />
       <StyledParagraph>
         The Fire type is a mostly all-out offensive type, and very powerful,
         given that most of the Pokémon belonging to this type are very strong

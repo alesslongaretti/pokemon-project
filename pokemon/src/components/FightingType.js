@@ -12,6 +12,13 @@ const StyledName = styled.h3`
 text-transform: capitalize;
 `;
 
+const StyledIcon = styled.img`
+  width: 20%;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
+`;
+
 const FightingType = props => {
 
   if (props.pokemonData[0] === undefined) {
@@ -20,7 +27,7 @@ const FightingType = props => {
 
   return (
     <div>
-      <img src={Fighting} alt="fighting type icon" />
+      <StyledIcon src={Fighting} alt="fighting type icon" />
       <StyledParagraph>
         The Fighting type is one of the strongest types, as the attacks are
         super effective against Normal, Ice, Rock, Dark and Steel-type Pokémon,

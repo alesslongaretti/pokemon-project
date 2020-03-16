@@ -12,6 +12,13 @@ const StyledName = styled.h3`
   text-transform: capitalize;
 `;
 
+const StyledIcon = styled.img`
+  width: 20%;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
+`;
+
 const IceType = props => {
   if (props.pokemonData[0] === undefined) {
     props.pokemonData.splice(0);
@@ -19,7 +26,7 @@ const IceType = props => {
 
   return (
     <div>
-      <img src={Ice} alt="ice type icon" />
+      <StyledIcon src={Ice} alt="ice type icon" />
       <StyledParagraph>
         The Ice type is another fragile type, being weak to the all-out
         offensive Fire-type and Fighting-type attacks, as well as Rock-type and

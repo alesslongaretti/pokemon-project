@@ -12,6 +12,13 @@ const StyledName = styled.h3`
 text-transform: capitalize;
 `;
 
+const StyledIcon = styled.img`
+  width: 20%;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
+`;
+
 const GhostType = props => {
 
   if (props.pokemonData[0] === undefined) {
@@ -20,7 +27,7 @@ const GhostType = props => {
 
   return (
     <div>
-      <img src={Ghost} alt="ghost type icon" />
+      <StyledIcon src={Ghost} alt="ghost type icon" />
       <StyledParagraph>
         Ghost-type moves are super effective against Psychic-type Pokémon and
         its own type, but they have no effect on Normal-type Pokémon. However,

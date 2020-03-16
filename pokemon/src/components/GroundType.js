@@ -12,6 +12,13 @@ const StyledName = styled.h3`
   text-transform: capitalize;
 `;
 
+const StyledIcon = styled.img`
+  width: 20%;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
+`;
+
 const GroundType = props => {
   if (props.pokemonData[0] === undefined) {
     props.pokemonData.splice(0);
@@ -19,7 +26,7 @@ const GroundType = props => {
 
   return (
     <div>
-      <img src={Ground} alt="ground type icon" />
+      <StyledIcon src={Ground} alt="ground type icon" />
       <StyledParagraph>
         The Ground type is also a mostly slow and physical type, hitting
         Electric, Fire, Poison, Rock and Steel super effectively while being

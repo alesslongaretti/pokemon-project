@@ -12,6 +12,13 @@ const StyledName = styled.h3`
   text-transform: capitalize;
 `;
 
+const StyledIcon = styled.img`
+  width: 20%;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
+`;
+
 const WaterType = props => {
   if (props.pokemonData[0] === undefined) {
     props.pokemonData.splice(0);
@@ -19,7 +26,7 @@ const WaterType = props => {
 
   return (
     <div>
-      <img src={Water} alt="water type icon" />
+      <StyledIcon src={Water} alt="water type icon" />
       <StyledParagraph>
         The Water type is a very balanced type, as well as being the most common
         out of the 18 types. Water-type Pokémon are super effective against

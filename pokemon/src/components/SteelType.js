@@ -12,6 +12,13 @@ const StyledName = styled.h3`
   text-transform: capitalize;
 `;
 
+const StyledIcon = styled.img`
+  width: 20%;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
+`;
+
 const SteelType = props => {
   if (props.pokemonData[0] === undefined) {
     props.pokemonData.splice(0);
@@ -19,7 +26,7 @@ const SteelType = props => {
 
   return (
     <div>
-      <img src={Steel} alt="steel type icon" />
+      <StyledIcon src={Steel} alt="steel type icon" />
       <StyledParagraph>
         Reflecting the indestructible nature of metal, the Steel type features
         the greatest defenses of all types, resisting 10 out of 18 types, in

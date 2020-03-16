@@ -12,6 +12,13 @@ const StyledName = styled.h3`
 text-transform: capitalize;
 `;
 
+const StyledIcon = styled.img`
+  width: 20%;
+  margin-top: 20px;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
+`;
+
 const ElectricType = (props) => {
 
   if (props.pokemonData[0] === undefined) {
@@ -19,7 +26,7 @@ const ElectricType = (props) => {
   }
   return (
     <div>
-      <img src={Electric} alt="electric type icon" />
+      <StyledIcon src={Electric} alt="electric type icon" />
       <StyledParagraph>
         Electric-type moves are super effective against Water and Flying-type
         Pokémon. Pokémon that belong to this type are immune to paralysis. As
