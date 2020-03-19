@@ -9,8 +9,8 @@ const StyledDiv = styled.div`
 
 const StyledImg = styled.img`
   align-item: center;
-  width: 80%;
-  margin: -70px -40px -70px -70px;
+  width: 90%;
+  margin: -13% 2% -10% -3%;
   -webkit-filter: drop-shadow(5px 5px 10px #000000);
   filter: drop-shadow(5px 5px 10px #000000);
 `;
@@ -30,7 +30,7 @@ const StyledType = styled.span`
 const StyledContainer = styled.div`
   display: flex;
   justify-content: space-around;
-  margin: 5% 0%;
+  margin: 1% 0%;
   flex-wrap: wrap;
 `;
 
