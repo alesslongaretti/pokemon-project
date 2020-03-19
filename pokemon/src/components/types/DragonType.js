@@ -1,5 +1,5 @@
 import React from "react";
-import Fairy from "../Images/Fairy.webp";
+import Dragon from "../../Images/Dragon.png";
 import styled from 'styled-components';
 import { connect } from "react-redux";
 
@@ -19,7 +19,7 @@ const StyledIcon = styled.img`
   box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
 `;
 
-const FairyType = props => {
+const DragonType = props => {
 
   if (props.pokemonData[0] === undefined) {
     props.pokemonData.splice(0)
@@ -27,12 +27,13 @@ const FairyType = props => {
 
   return (
     <div>
-      <StyledIcon src={Fairy} alt="fairy type icon" />
+      <StyledIcon src={Dragon} alt="dragon type icon" />
       <StyledParagraph>
-      To turn the tides for the everlasting domination of the Dragon-type
-        Pokémon, the Fairy type was added to balance the meta. Fairy-type
-        attacks are super effective against Fighting, Dragon and Dark-type
-        Pokémon. Fairy-type Pokémon are also immune to Dragon-type moves.
+        Dragon-type moves are only super effective against its own type, yet
+        Dragon-type Pokémon have powerful stats to compensate. However, most
+        final form Dragon-type Pokémon have double weaknesses to Ice-type moves
+        due to their secondary types, and Dragon-type moves have no effect on
+        Fairy-type Pokémon.
       </StyledParagraph>
       <div>
         {props.pokemonData &&
@@ -40,7 +41,7 @@ const FairyType = props => {
             return (
               <div key={i}>
                 {pokemon.types.map((type, i) => {
-                  if (type.type.name.includes("fairy")) {
+                  if (type.type.name.includes("dragon")) {
                   return (
                   <div key={i}>
                     <StyledName>{pokemon.name}</StyledName>
@@ -64,4 +65,5 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {})(FairyType);
+export default connect(mapStateToProps, {})(DragonType);
+

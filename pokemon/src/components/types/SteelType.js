@@ -1,5 +1,5 @@
 import React from "react";
-import Poison from "../Images/Poison.png";
+import Steel from "../../Images/Steel.png";
 import styled from "styled-components";
 import { connect } from "react-redux";
 
@@ -19,19 +19,23 @@ const StyledIcon = styled.img`
   box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
 `;
 
-const PoisonType = props => {
+const SteelType = props => {
   if (props.pokemonData[0] === undefined) {
     props.pokemonData.splice(0);
   }
+
   return (
     <div>
-      <StyledIcon src={Poison} alt="Poison type icon" />
+      <StyledIcon src={Steel} alt="steel type icon" />
       <StyledParagraph>
-        Poison-type Pokémon, with their moves being only super effective against
-        Grass-type and the newly-introduced Fairy-type Pokémon, are mostly used
-        as "trouble-makers" by inducing status ailments, especially Poison and
-        Bad Poison, while also being immune to both of them. However, their
-        attacks have no effect on Steel-type Pokémon.
+        Reflecting the indestructible nature of metal, the Steel type features
+        the greatest defenses of all types, resisting 10 out of 18 types, in
+        addition to the complete immunity to Poison-type attacks, including both
+        Poison and Bad Poison status ailments, barring those inflicted by a
+        Pokémon with the ability Corrosion. Steel-type moves are super effective
+        against Ice, Rock and Fairy-type Pokémon. Steel-type Pokémon are not
+        usually used offensively until the Fairy type was introduced, but they
+        have always been great defensive physical walls.
       </StyledParagraph>
       <div>
         {props.pokemonData &&
@@ -39,7 +43,7 @@ const PoisonType = props => {
             return (
               <div key={i}>
                 {pokemon.types.map((type, i) => {
-                  if (type.type.name.includes("poison")) {
+                  if (type.type.name.includes("steel")) {
                     return (
                       <div key={i}>
                         <StyledName>{pokemon.name}</StyledName>
@@ -65,4 +69,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, {})(PoisonType);
+export default connect(mapStateToProps, {})(SteelType);

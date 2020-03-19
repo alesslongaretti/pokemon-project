@@ -1,5 +1,5 @@
 import React from "react";
-import Ground from "../Images/Ground.png";
+import Psychic from "../../Images/Psychic.png";
 import styled from "styled-components";
 import { connect } from "react-redux";
 
@@ -19,21 +19,21 @@ const StyledIcon = styled.img`
   box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
 `;
 
-const GroundType = props => {
+const PsychicType = props => {
   if (props.pokemonData[0] === undefined) {
     props.pokemonData.splice(0);
   }
 
   return (
     <div>
-      <StyledIcon src={Ground} alt="ground type icon" />
+      <StyledIcon src={Psychic} alt="psychic type icon" />
       <StyledParagraph>
-        The Ground type is also a mostly slow and physical type, hitting
-        Electric, Fire, Poison, Rock and Steel super effectively while being
-        immune to Electric-type attacks. However, similar to Rock-type, the
-        power of Ground is hindered by the major weaknesses against Water and
-        Grass, as well as having no effect on Flying-type Pokémon and those with
-        the Ability Levitate.
+        Psychic-type attacks are super effective against Fighting-type and
+        Poison-type Pokémon. However, they have no effect on Dark-type Pokémon.
+        It was the most dominant type in the earliest Pokémon games due to
+        broken mechanics and coding errors, and even with the error fixed, the
+        Special Attack stats of Psychic-type Pokémon are still not to be
+        underestimated.
       </StyledParagraph>
       <div>
         {props.pokemonData &&
@@ -41,7 +41,7 @@ const GroundType = props => {
             return (
               <div key={i}>
                 {pokemon.types.map((type, i) => {
-                  if (type.type.name.includes("ground")) {
+                  if (type.type.name.includes("psychic")) {
                     return (
                       <div key={i}>
                         <StyledName>{pokemon.name}</StyledName>
@@ -67,4 +67,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, {})(GroundType);
+export default connect(mapStateToProps, {})(PsychicType);

@@ -1,5 +1,5 @@
 import React from "react";
-import Bug from "../Images/Bug.png";
+import Bug from "../../Images/Bug.png";
 import styled from "styled-components";
 import { connect } from "react-redux";
 

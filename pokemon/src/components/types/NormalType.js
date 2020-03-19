@@ -1,5 +1,5 @@
 import React from "react";
-import Normal from "../Images/Normal.png";
+import Normal from "../../Images/Normal.png";
 import styled from "styled-components";
 import { connect } from "react-redux";
 

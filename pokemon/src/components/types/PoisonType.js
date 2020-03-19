@@ -1,5 +1,5 @@
 import React from "react";
-import Psychic from "../Images/Psychic.png";
+import Poison from "../../Images/Poison.png";
 import styled from "styled-components";
 import { connect } from "react-redux";
 
@@ -19,21 +19,19 @@ const StyledIcon = styled.img`
   box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
 `;
 
-const PsychicType = props => {
+const PoisonType = props => {
   if (props.pokemonData[0] === undefined) {
     props.pokemonData.splice(0);
   }
-
   return (
     <div>
-      <StyledIcon src={Psychic} alt="psychic type icon" />
+      <StyledIcon src={Poison} alt="Poison type icon" />
       <StyledParagraph>
-        Psychic-type attacks are super effective against Fighting-type and
-        Poison-type Pokémon. However, they have no effect on Dark-type Pokémon.
-        It was the most dominant type in the earliest Pokémon games due to
-        broken mechanics and coding errors, and even with the error fixed, the
-        Special Attack stats of Psychic-type Pokémon are still not to be
-        underestimated.
+        Poison-type Pokémon, with their moves being only super effective against
+        Grass-type and the newly-introduced Fairy-type Pokémon, are mostly used
+        as "trouble-makers" by inducing status ailments, especially Poison and
+        Bad Poison, while also being immune to both of them. However, their
+        attacks have no effect on Steel-type Pokémon.
       </StyledParagraph>
       <div>
         {props.pokemonData &&
@@ -41,7 +39,7 @@ const PsychicType = props => {
             return (
               <div key={i}>
                 {pokemon.types.map((type, i) => {
-                  if (type.type.name.includes("psychic")) {
+                  if (type.type.name.includes("poison")) {
                     return (
                       <div key={i}>
                         <StyledName>{pokemon.name}</StyledName>
@@ -67,4 +65,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, {})(PsychicType);
+export default connect(mapStateToProps, {})(PoisonType);

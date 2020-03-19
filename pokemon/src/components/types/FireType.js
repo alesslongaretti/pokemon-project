@@ -1,5 +1,5 @@
 import React from "react";
-import Fire from "../Images/Fire.png";
+import Fire from "../../Images/Fire.png";
 import styled from 'styled-components';
 import { connect } from "react-redux";
 

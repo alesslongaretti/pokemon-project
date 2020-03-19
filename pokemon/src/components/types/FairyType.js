@@ -1,5 +1,5 @@
 import React from "react";
-import Flying from "../Images/Flying.png";
+import Fairy from "../../Images/Fairy.webp";
 import styled from 'styled-components';
 import { connect } from "react-redux";
 
@@ -19,7 +19,7 @@ const StyledIcon = styled.img`
   box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
 `;
 
-const FlyingType = props => {
+const FairyType = props => {
 
   if (props.pokemonData[0] === undefined) {
     props.pokemonData.splice(0)
@@ -27,14 +27,12 @@ const FlyingType = props => {
 
   return (
     <div>
-      <StyledIcon src={Flying} alt="flying type icon" />
+      <StyledIcon src={Fairy} alt="fairy type icon" />
       <StyledParagraph>
-        Flying-type Pokémon are usually Pokémon that fly or resemble birds, so
-        they are immune to Ground-type attacks, But weak to Rock, Ice and
-        Electric-Type Moves. Most Flying-type Pokémon are dual-type Pokémon,
-        with the most common ones being dual Normal/Flying-type Pokémon.
-        Flying-type moves are super effective against Grass, Bug, and
-        Fighting-type Pokémon.
+      To turn the tides for the everlasting domination of the Dragon-type
+        Pokémon, the Fairy type was added to balance the meta. Fairy-type
+        attacks are super effective against Fighting, Dragon and Dark-type
+        Pokémon. Fairy-type Pokémon are also immune to Dragon-type moves.
       </StyledParagraph>
       <div>
         {props.pokemonData &&
@@ -42,7 +40,7 @@ const FlyingType = props => {
             return (
               <div key={i}>
                 {pokemon.types.map((type, i) => {
-                  if (type.type.name.includes("flying")) {
+                  if (type.type.name.includes("fairy")) {
                   return (
                   <div key={i}>
                     <StyledName>{pokemon.name}</StyledName>
@@ -66,4 +64,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {})(FlyingType);
+export default connect(mapStateToProps, {})(FairyType);
