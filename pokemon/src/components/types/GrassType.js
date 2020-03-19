@@ -1,5 +1,5 @@
 import React from 'react';
-import Grass from '../Images/Grass.png';
+import Grass from '../../Images/Grass.png';
 import styled from 'styled-components';
 import { connect } from "react-redux";
 

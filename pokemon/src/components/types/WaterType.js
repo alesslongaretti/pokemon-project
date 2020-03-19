@@ -1,5 +1,5 @@
 import React from "react";
-import Ice from "../Images/Ice.png";
+import Water from "../../Images/Water.png";
 import styled from "styled-components";
 import { connect } from "react-redux";
 
@@ -19,22 +19,21 @@ const StyledIcon = styled.img`
   box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
 `;
 
-const IceType = props => {
+const WaterType = props => {
   if (props.pokemonData[0] === undefined) {
     props.pokemonData.splice(0);
   }
 
   return (
     <div>
-      <StyledIcon src={Ice} alt="ice type icon" />
+      <StyledIcon src={Water} alt="water type icon" />
       <StyledParagraph>
-        The Ice type is another fragile type, being weak to the all-out
-        offensive Fire-type and Fighting-type attacks, as well as Rock-type and
-        Steel-type moves. Luckily, its unique strength on being the nightmare of
-        Dragon-type Pokémon comes in handy. In addition, Ice-type attacks also
-        hit Grass-type, Flying-type and Ground-type Pokémon super effectively.
-        The Ice type is a usually bad type for defensive Pokémon as it only
-        resists itself.
+        The Water type is a very balanced type, as well as being the most common
+        out of the 18 types. Water-type Pokémon are super effective against
+        Fire-type, Rock-type and Ground-type Pokémon, but are weak to
+        Electric-type and Grass-type attacks. Water types also resist Fire-type,
+        Steel-type, Ice-type, and Water-type moves, making it a semi-defensive
+        typing.
       </StyledParagraph>
       <div>
         {props.pokemonData &&
@@ -42,7 +41,7 @@ const IceType = props => {
             return (
               <div key={i}>
                 {pokemon.types.map((type, i) => {
-                  if (type.type.name.includes("ice")) {
+                  if (type.type.name.includes("water")) {
                     return (
                       <div key={i}>
                         <StyledName>{pokemon.name}</StyledName>
@@ -68,4 +67,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, {})(IceType);
+export default connect(mapStateToProps, {})(WaterType);

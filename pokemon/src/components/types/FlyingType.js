@@ -1,5 +1,5 @@
 import React from "react";
-import Fighting from "../Images/Fighting.png";
+import Flying from "../../Images/Flying.png";
 import styled from 'styled-components';
 import { connect } from "react-redux";
 
@@ -19,7 +19,7 @@ const StyledIcon = styled.img`
   box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
 `;
 
-const FightingType = props => {
+const FlyingType = props => {
 
   if (props.pokemonData[0] === undefined) {
     props.pokemonData.splice(0)
@@ -27,15 +27,14 @@ const FightingType = props => {
 
   return (
     <div>
-      <StyledIcon src={Fighting} alt="fighting type icon" />
+      <StyledIcon src={Flying} alt="flying type icon" />
       <StyledParagraph>
-        The Fighting type is one of the strongest types, as the attacks are
-        super effective against Normal, Ice, Rock, Dark and Steel-type Pokémon,
-        tying with Ground for causing super effective damage against most types.
-        Its unique power against Normal-type is what makes Fighting-type Pokémon
-        shine. Unfortunately, their power is kept in check by attacks of
-        Flying-type, Psychic-type and the new Fairy-type. It also has no effect
-        on Ghost-type Pokémon.
+        Flying-type Pokémon are usually Pokémon that fly or resemble birds, so
+        they are immune to Ground-type attacks, But weak to Rock, Ice and
+        Electric-Type Moves. Most Flying-type Pokémon are dual-type Pokémon,
+        with the most common ones being dual Normal/Flying-type Pokémon.
+        Flying-type moves are super effective against Grass, Bug, and
+        Fighting-type Pokémon.
       </StyledParagraph>
       <div>
         {props.pokemonData &&
@@ -43,7 +42,7 @@ const FightingType = props => {
             return (
               <div key={i}>
                 {pokemon.types.map((type, i) => {
-                  if (type.type.name.includes("fighting")) {
+                  if (type.type.name.includes("flying")) {
                   return (
                   <div key={i}>
                     <StyledName>{pokemon.name}</StyledName>
@@ -67,4 +66,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {})(FightingType);
+export default connect(mapStateToProps, {})(FlyingType);

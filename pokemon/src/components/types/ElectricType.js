@@ -1,5 +1,5 @@
 import React from "react";
-import Electric from "../Images/Electric.png";
+import Electric from "../../Images/Electric.png";
 import styled from "styled-components";
 import { connect } from "react-redux";
 

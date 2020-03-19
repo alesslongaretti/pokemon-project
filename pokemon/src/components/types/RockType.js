@@ -1,5 +1,5 @@
 import React from "react";
-import Rock from "../Images/Rock.png";
+import Rock from "../../Images/Rock.png";
 import styled from "styled-components";
 import { connect } from "react-redux";
 

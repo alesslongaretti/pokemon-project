@@ -1,5 +1,5 @@
 import React from "react";
-import Steel from "../Images/Steel.png";
+import Ice from "../../Images/Ice.png";
 import styled from "styled-components";
 import { connect } from "react-redux";
 
@@ -19,23 +19,22 @@ const StyledIcon = styled.img`
   box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
 `;
 
-const SteelType = props => {
+const IceType = props => {
   if (props.pokemonData[0] === undefined) {
     props.pokemonData.splice(0);
   }
 
   return (
     <div>
-      <StyledIcon src={Steel} alt="steel type icon" />
+      <StyledIcon src={Ice} alt="ice type icon" />
       <StyledParagraph>
-        Reflecting the indestructible nature of metal, the Steel type features
-        the greatest defenses of all types, resisting 10 out of 18 types, in
-        addition to the complete immunity to Poison-type attacks, including both
-        Poison and Bad Poison status ailments, barring those inflicted by a
-        Pokémon with the ability Corrosion. Steel-type moves are super effective
-        against Ice, Rock and Fairy-type Pokémon. Steel-type Pokémon are not
-        usually used offensively until the Fairy type was introduced, but they
-        have always been great defensive physical walls.
+        The Ice type is another fragile type, being weak to the all-out
+        offensive Fire-type and Fighting-type attacks, as well as Rock-type and
+        Steel-type moves. Luckily, its unique strength on being the nightmare of
+        Dragon-type Pokémon comes in handy. In addition, Ice-type attacks also
+        hit Grass-type, Flying-type and Ground-type Pokémon super effectively.
+        The Ice type is a usually bad type for defensive Pokémon as it only
+        resists itself.
       </StyledParagraph>
       <div>
         {props.pokemonData &&
@@ -43,7 +42,7 @@ const SteelType = props => {
             return (
               <div key={i}>
                 {pokemon.types.map((type, i) => {
-                  if (type.type.name.includes("steel")) {
+                  if (type.type.name.includes("ice")) {
                     return (
                       <div key={i}>
                         <StyledName>{pokemon.name}</StyledName>
@@ -69,4 +68,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, {})(SteelType);
+export default connect(mapStateToProps, {})(IceType);

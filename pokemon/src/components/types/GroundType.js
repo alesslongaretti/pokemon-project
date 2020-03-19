@@ -1,5 +1,5 @@
 import React from "react";
-import Water from "../Images/Water.png";
+import Ground from "../../Images/Ground.png";
 import styled from "styled-components";
 import { connect } from "react-redux";
 
@@ -19,21 +19,21 @@ const StyledIcon = styled.img`
   box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
 `;
 
-const WaterType = props => {
+const GroundType = props => {
   if (props.pokemonData[0] === undefined) {
     props.pokemonData.splice(0);
   }
 
   return (
     <div>
-      <StyledIcon src={Water} alt="water type icon" />
+      <StyledIcon src={Ground} alt="ground type icon" />
       <StyledParagraph>
-        The Water type is a very balanced type, as well as being the most common
-        out of the 18 types. Water-type Pokémon are super effective against
-        Fire-type, Rock-type and Ground-type Pokémon, but are weak to
-        Electric-type and Grass-type attacks. Water types also resist Fire-type,
-        Steel-type, Ice-type, and Water-type moves, making it a semi-defensive
-        typing.
+        The Ground type is also a mostly slow and physical type, hitting
+        Electric, Fire, Poison, Rock and Steel super effectively while being
+        immune to Electric-type attacks. However, similar to Rock-type, the
+        power of Ground is hindered by the major weaknesses against Water and
+        Grass, as well as having no effect on Flying-type Pokémon and those with
+        the Ability Levitate.
       </StyledParagraph>
       <div>
         {props.pokemonData &&
@@ -41,7 +41,7 @@ const WaterType = props => {
             return (
               <div key={i}>
                 {pokemon.types.map((type, i) => {
-                  if (type.type.name.includes("water")) {
+                  if (type.type.name.includes("ground")) {
                     return (
                       <div key={i}>
                         <StyledName>{pokemon.name}</StyledName>
@@ -67,4 +67,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps, {})(WaterType);
+export default connect(mapStateToProps, {})(GroundType);

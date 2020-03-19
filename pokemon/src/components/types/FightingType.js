@@ -1,5 +1,5 @@
 import React from "react";
-import Dragon from "../Images/Dragon.png";
+import Fighting from "../../Images/Fighting.png";
 import styled from 'styled-components';
 import { connect } from "react-redux";
 
@@ -19,7 +19,7 @@ const StyledIcon = styled.img`
   box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
 `;
 
-const DragonType = props => {
+const FightingType = props => {
 
   if (props.pokemonData[0] === undefined) {
     props.pokemonData.splice(0)
@@ -27,13 +27,15 @@ const DragonType = props => {
 
   return (
     <div>
-      <StyledIcon src={Dragon} alt="dragon type icon" />
+      <StyledIcon src={Fighting} alt="fighting type icon" />
       <StyledParagraph>
-        Dragon-type moves are only super effective against its own type, yet
-        Dragon-type Pokémon have powerful stats to compensate. However, most
-        final form Dragon-type Pokémon have double weaknesses to Ice-type moves
-        due to their secondary types, and Dragon-type moves have no effect on
-        Fairy-type Pokémon.
+        The Fighting type is one of the strongest types, as the attacks are
+        super effective against Normal, Ice, Rock, Dark and Steel-type Pokémon,
+        tying with Ground for causing super effective damage against most types.
+        Its unique power against Normal-type is what makes Fighting-type Pokémon
+        shine. Unfortunately, their power is kept in check by attacks of
+        Flying-type, Psychic-type and the new Fairy-type. It also has no effect
+        on Ghost-type Pokémon.
       </StyledParagraph>
       <div>
         {props.pokemonData &&
@@ -41,7 +43,7 @@ const DragonType = props => {
             return (
               <div key={i}>
                 {pokemon.types.map((type, i) => {
-                  if (type.type.name.includes("dragon")) {
+                  if (type.type.name.includes("fighting")) {
                   return (
                   <div key={i}>
                     <StyledName>{pokemon.name}</StyledName>
@@ -65,5 +67,4 @@ const mapStateToProps = state => {
   }
 }
 
-export default connect(mapStateToProps, {})(DragonType);
-
+export default connect(mapStateToProps, {})(FightingType);

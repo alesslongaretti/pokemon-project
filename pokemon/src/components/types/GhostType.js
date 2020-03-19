@@ -1,5 +1,5 @@
 import React from "react";
-import Ghost from '../Images/Ghost.png';
+import Ghost from '../../Images/Ghost.png';
 import styled from 'styled-components';
 import { connect } from "react-redux";
 
