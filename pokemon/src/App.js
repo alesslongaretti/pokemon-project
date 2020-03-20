@@ -18,21 +18,12 @@ import SteelType from './components/types/SteelType';
 import WaterType from './components/types/WaterType';
 import Dashboard from './components/Dashboard';
 import SearchByType from './components/SearchByType';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom';
-import styled from 'styled-components';
+import Navigation from './components/Navigation';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import { connect } from "react-redux";
 import { getPokemons } from "./components/actions/actions";
-
-const StyledLink = styled(Link)`
-  text-decoration: none;
-  color: #fff5b3;
-  text-shadow: -1px -1px #3B4CCA, 1px -1px #3B4CCA, -1px 1px #3B4CCA, 1px 1px #3B4CCA;
-  -webkit-filter: drop-shadow(1px 1px 2px #000); filter: drop-shadow(1px 1px 2px #000);
-  font-size: 18px;
-  margin: 5%;
-`;
 
 const App = props => {
   useEffect(() => {
@@ -41,8 +32,7 @@ const App = props => {
 
   return (
     <Router className="App">
-      <StyledLink className="home-link" to="/">Home</StyledLink>
-      <StyledLink className="type-link" to="/types">Types</StyledLink>
+      <Navigation />
       <Switch>
         <Route exact path="/" component={Dashboard} />
         <Route exact path="/types" component={SearchByType} />

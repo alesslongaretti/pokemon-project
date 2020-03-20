@@ -121,7 +121,7 @@ text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
 `;
 
 
-const SearchByType = () => {
+const SearchByType = props => {
   return (
     <StyledDiv className="headers">
       <StyledHeader>
