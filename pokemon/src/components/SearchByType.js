@@ -121,13 +121,11 @@ text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
 `;
 
 
-const SearchByType = () => {
+const SearchByType = props => {
   return (
     <StyledDiv className="headers">
       <StyledHeader>
-        <a href="https://fontmeme.com/pokemon-font/">
-          <img src="https://fontmeme.com/permalink/200316/752d21e33c2682ba029d3ef3f87fd818.png" alt="pokemon-font" border="0"/>
-        </a>
+        <img src="https://fontmeme.com/permalink/200316/752d21e33c2682ba029d3ef3f87fd818.png" alt="pokemon-font" border="0"/>
     </StyledHeader>
       <StyledLinksDiv>
 
