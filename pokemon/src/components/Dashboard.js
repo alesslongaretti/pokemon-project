@@ -79,7 +79,7 @@ const Dashboard = props => {
                   {pokemon.types.map((type, i) => {
                     return (
                       <StyledType key={i}>
-                        {" " + type.type.name + " "}
+                        {" " + type}
                       </StyledType>
                     );
                   })}
