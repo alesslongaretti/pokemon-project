@@ -37,219 +37,308 @@ const StyledLink = styled(Link)`
 `;
 
 const StyledIcon = styled.img`
-  width: 12vw;
-  margin-top: 20px;
+  width: 8em;
   border-radius: 50%;
-  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
+  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
 `;
 
 const StyledBugName = styled.h2`
-  color: #99CE58;
+  color: #99ce58;
+  width: 10em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const StyledDragonName = styled.h2`
-  color: #8E9FD3;
+  color: #8e9fd3;
+  width: 10em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const StyledElectricName = styled.h2`
   color: #fbf384;
+  width: 10em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const StyledFairyName = styled.h2`
-  color: #F9BEF5;
+  color: #f9bef5;
+  width: 10em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const StyledFightingName = styled.h2`
-  color: #F17942;
+  color: #f17942;
+  width: 10em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const StyledFireName = styled.h2`
   color: #e63333;
+  width: 10em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const StyledFlyingName = styled.h2`
-  color: #B0F7EF;
+  color: #b0f7ef;
+  width: 10em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const StyledGhostName = styled.h2`
   color: #827a9f;
+  width: 10em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const StyledGrassName = styled.h2`
   color: #00cc00;
+  width: 10em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const StyledGroundName = styled.h2`
-  color: #F5C7A3;
+  color: #f5c7a3;
+  width: 10em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const StyledIceName = styled.h2`
-  color: #A1F0F0;
+  color: #a1f0f0;
+  width: 10em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const StyledNormalName = styled.h2`
-  color: #BEC2C2;
+  color: #bec2c2;
+  width: 10em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const StyledPoisonName = styled.h2`
   color: #b041d8;
+  width: 10em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const StyledPsychicName = styled.h2`
-  color: #EB53E3;
+  color: #eb53e3;
+  width: 10em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const StyledRockName = styled.h2`
-  color: #D09C6D;
+  color: #d09c6d;
+  width: 10em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const StyledSteelName = styled.h2`
-  color: #A29D99;
+  color: #a29d99;
+  width: 10em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
 const StyledWaterName = styled.h2`
-  color: #4478E5;
+  color: #4478e5;
+  width: 10em;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 `;
 
-const StyledHeader = styled.h2`
-  -webkit-filter: drop-shadow(5px 5px 5px #000); filter: drop-shadow(3px 3px 3px #000);
+const StyledHeader = styled.img`
+  width: 90%;
+  -webkit-filter: drop-shadow(5px 5px 5px #000);
+  filter: drop-shadow(3px 3px 3px #000);
 `;
 
 const StyledNamesDiv = styled.div`
-text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
--webkit-filter: drop-shadow(1px 1px 2px #000); filter: drop-shadow(1px 1px 2px #000);
+  text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(1px 1px 2px #000);
+  position: relative;
+  text-align: center;
+  color: white;
 `;
-
 
 const SearchByType = props => {
   return (
     <StyledDiv className="headers">
-      <StyledHeader>
-        <img src="https://fontmeme.com/permalink/200316/752d21e33c2682ba029d3ef3f87fd818.png" alt="pokemon-font" border="0"/>
-    </StyledHeader>
+      <div>
+        <StyledHeader
+          src="https://fontmeme.com/permalink/200316/752d21e33c2682ba029d3ef3f87fd818.png"
+          alt="pokemon-font"
+          border="0"
+        />
+      </div>
       <StyledLinksDiv>
-
         <StyledLink className="link" to="/bug-type">
           <StyledNamesDiv>
-            <StyledBugName> Bug </StyledBugName>
-        </StyledNamesDiv>
-          <div>
             <StyledIcon src={Bug} alt="bug type icon" />
-          </div>
+            <StyledBugName> Bug </StyledBugName>
+          </StyledNamesDiv>
         </StyledLink>
 
         <StyledLink className="link" to="/dragon-type">
           <StyledNamesDiv>
+            <StyledIcon src={Dragon} alt="dragon type icon" />
             <StyledDragonName> Dragon </StyledDragonName>
           </StyledNamesDiv>
-          <StyledIcon src={Dragon} alt="dragon type icon" />
         </StyledLink>
 
         <StyledLink className="link" to="/electric-type">
           <StyledNamesDiv>
+            <StyledIcon src={Electric} alt="electric type icon" />
             <StyledElectricName> Electric </StyledElectricName>
           </StyledNamesDiv>
-          <StyledIcon src={Electric} alt="electric type icon" />
         </StyledLink>
 
         <StyledLink className="link" to="/fairy-type">
           <StyledNamesDiv>
+            <StyledIcon src={Fairy} alt="fairy type icon" />
             <StyledFairyName> Fairy </StyledFairyName>
           </StyledNamesDiv>
-          <StyledIcon src={Fairy} alt="fairy type icon" />
         </StyledLink>
 
         <StyledLink className="link" to="/fighting-type">
           <StyledNamesDiv>
+            <StyledIcon src={Fighting} alt="fighting type icon" />
             <StyledFightingName> Fighting</StyledFightingName>
           </StyledNamesDiv>
-          <StyledIcon src={Fighting} alt="fighting type icon" />
         </StyledLink>
 
         <StyledLink className="link" to="/fire-type">
           <StyledNamesDiv>
+            <StyledIcon src={Fire} alt="fire type icon" />
             <StyledFireName> Fire </StyledFireName>
           </StyledNamesDiv>
-          <StyledIcon src={Fire} alt="fire type icon" />
         </StyledLink>
 
         <StyledLink className="link" to="/flying-type">
           <StyledNamesDiv>
+            <StyledIcon src={Flying} alt="flying type icon" />
             <StyledFlyingName> Flying </StyledFlyingName>
           </StyledNamesDiv>
-          <StyledIcon src={Flying} alt="flying type icon" />
         </StyledLink>
 
         <StyledLink className="link" to="/ghost-type">
           <StyledNamesDiv>
+            <StyledIcon src={Ghost} alt="ghost type icon" />
             <StyledGhostName> Ghost </StyledGhostName>
           </StyledNamesDiv>
-          <StyledIcon src={Ghost} alt="ghost type icon" />
         </StyledLink>
 
         <StyledLink className="link" to="/grass-type">
           <StyledNamesDiv>
+            <StyledIcon src={Grass} alt="grass type icon" />
             <StyledGrassName> Grass </StyledGrassName>
           </StyledNamesDiv>
-          <StyledIcon src={Grass} alt="grass type icon" />
         </StyledLink>
 
         <StyledLink className="link" to="/ground-type">
           <StyledNamesDiv>
+            <StyledIcon src={Ground} alt="ground type icon" />
             <StyledGroundName> Ground </StyledGroundName>
           </StyledNamesDiv>
-          <StyledIcon src={Ground} alt="ground type icon" />
         </StyledLink>
 
         <StyledLink className="link" to="/ice-type">
           <StyledNamesDiv>
+            <StyledIcon src={Ice} alt="Ice type icon" />
             <StyledIceName> Ice </StyledIceName>
           </StyledNamesDiv>
-          <StyledIcon src={Ice} alt="Ice type icon" />
         </StyledLink>
 
         <StyledLink className="link" to="/normal-type">
           <StyledNamesDiv>
+            <StyledIcon src={Normal} alt="normal type icon" />
             <StyledNormalName> Normal </StyledNormalName>
           </StyledNamesDiv>
-          <StyledIcon src={Normal} alt="normal type icon" />
         </StyledLink>
 
         <StyledLink className="link" to="/poison-type">
           <StyledNamesDiv>
+            <StyledIcon src={Poison} alt="poison type icon" />
             <StyledPoisonName> Poison </StyledPoisonName>
           </StyledNamesDiv>
-          <StyledIcon src={Poison} alt="poison type icon" />
         </StyledLink>
 
         <StyledLink className="link" to="/psychic-type">
           <StyledNamesDiv>
+            <StyledIcon src={Psychic} alt="psychic type icon" />
             <StyledPsychicName> Psychic </StyledPsychicName>
           </StyledNamesDiv>
-          <StyledIcon src={Psychic} alt="psychic type icon" />
         </StyledLink>
 
         <StyledLink className="link" to="/rock-type">
           <StyledNamesDiv>
+            <StyledIcon src={Rock} alt="rock type icon" />
             <StyledRockName> Rock </StyledRockName>
           </StyledNamesDiv>
-          <StyledIcon src={Rock} alt="rock type icon" />
         </StyledLink>
 
         <StyledLink className="link" to="/steel-type">
           <StyledNamesDiv>
+            <StyledIcon src={Steel} alt="steel type icon" />
             <StyledSteelName> Steel </StyledSteelName>
           </StyledNamesDiv>
-          <StyledIcon src={Steel} alt="steel type icon" />
         </StyledLink>
 
         <StyledLink className="link" to="/water-type">
           <StyledNamesDiv>
+            <StyledIcon src={Water} alt="water type icon" />
             <StyledWaterName> Water </StyledWaterName>
           </StyledNamesDiv>
-          <StyledIcon src={Water} alt="water type icon" />
         </StyledLink>
-
       </StyledLinksDiv>
     </StyledDiv>
   );
