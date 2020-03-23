@@ -30,7 +30,7 @@ const StyledLinksDiv = styled.div`
   flex-wrap: wrap;
 `;
 
-const StyledLink = styled(Link)`
+const StyledLink = styled.a`
   margin: 3%;
   display: block;
   text-decoration: none;
@@ -221,119 +221,119 @@ const SearchByType = props => {
         />
       </div>
       <StyledLinksDiv>
-        <StyledLink className="link" to="/bug-type">
+        <StyledLink className="link" href="/bug-type">
           <StyledNamesDiv>
             <StyledIcon src={Bug} alt="bug type icon" />
             <StyledBugName> Bug </StyledBugName>
           </StyledNamesDiv>
         </StyledLink>
 
-        <StyledLink className="link" to="/dragon-type">
+        <StyledLink className="link" href="/dragon-type">
           <StyledNamesDiv>
             <StyledIcon src={Dragon} alt="dragon type icon" />
             <StyledDragonName> Dragon </StyledDragonName>
           </StyledNamesDiv>
         </StyledLink>
 
-        <StyledLink className="link" to="/electric-type">
+        <StyledLink className="link" href="/electric-type">
           <StyledNamesDiv>
             <StyledIcon src={Electric} alt="electric type icon" />
             <StyledElectricName> Electric </StyledElectricName>
           </StyledNamesDiv>
         </StyledLink>
 
-        <StyledLink className="link" to="/fairy-type">
+        <StyledLink className="link" href="/fairy-type">
           <StyledNamesDiv>
             <StyledIcon src={Fairy} alt="fairy type icon" />
             <StyledFairyName> Fairy </StyledFairyName>
           </StyledNamesDiv>
         </StyledLink>
 
-        <StyledLink className="link" to="/fighting-type">
+        <StyledLink className="link" href="/fighting-type">
           <StyledNamesDiv>
             <StyledIcon src={Fighting} alt="fighting type icon" />
             <StyledFightingName> Fighting</StyledFightingName>
           </StyledNamesDiv>
         </StyledLink>
 
-        <StyledLink className="link" to="/fire-type">
+        <StyledLink className="link" href="/fire-type">
           <StyledNamesDiv>
             <StyledIcon src={Fire} alt="fire type icon" />
             <StyledFireName> Fire </StyledFireName>
           </StyledNamesDiv>
         </StyledLink>
 
-        <StyledLink className="link" to="/flying-type">
+        <StyledLink className="link" href="/flying-type">
           <StyledNamesDiv>
             <StyledIcon src={Flying} alt="flying type icon" />
             <StyledFlyingName> Flying </StyledFlyingName>
           </StyledNamesDiv>
         </StyledLink>
 
-        <StyledLink className="link" to="/ghost-type">
+        <StyledLink className="link" href="/ghost-type">
           <StyledNamesDiv>
             <StyledIcon src={Ghost} alt="ghost type icon" />
             <StyledGhostName> Ghost </StyledGhostName>
           </StyledNamesDiv>
         </StyledLink>
 
-        <StyledLink className="link" to="/grass-type">
+        <StyledLink className="link" href="/grass-type">
           <StyledNamesDiv>
             <StyledIcon src={Grass} alt="grass type icon" />
             <StyledGrassName> Grass </StyledGrassName>
           </StyledNamesDiv>
         </StyledLink>
 
-        <StyledLink className="link" to="/ground-type">
+        <StyledLink className="link" href="/ground-type">
           <StyledNamesDiv>
             <StyledIcon src={Ground} alt="ground type icon" />
             <StyledGroundName> Ground </StyledGroundName>
           </StyledNamesDiv>
         </StyledLink>
 
-        <StyledLink className="link" to="/ice-type">
+        <StyledLink className="link" href="/ice-type">
           <StyledNamesDiv>
             <StyledIcon src={Ice} alt="Ice type icon" />
             <StyledIceName> Ice </StyledIceName>
           </StyledNamesDiv>
         </StyledLink>
 
-        <StyledLink className="link" to="/normal-type">
+        <StyledLink className="link" href="/normal-type">
           <StyledNamesDiv>
             <StyledIcon src={Normal} alt="normal type icon" />
             <StyledNormalName> Normal </StyledNormalName>
           </StyledNamesDiv>
         </StyledLink>
 
-        <StyledLink className="link" to="/poison-type">
+        <StyledLink className="link" href="/poison-type">
           <StyledNamesDiv>
             <StyledIcon src={Poison} alt="poison type icon" />
             <StyledPoisonName> Poison </StyledPoisonName>
           </StyledNamesDiv>
         </StyledLink>
 
-        <StyledLink className="link" to="/psychic-type">
+        <StyledLink className="link" href="/psychic-type">
           <StyledNamesDiv>
             <StyledIcon src={Psychic} alt="psychic type icon" />
             <StyledPsychicName> Psychic </StyledPsychicName>
           </StyledNamesDiv>
         </StyledLink>
 
-        <StyledLink className="link" to="/rock-type">
+        <StyledLink className="link" href="/rock-type">
           <StyledNamesDiv>
             <StyledIcon src={Rock} alt="rock type icon" />
             <StyledRockName> Rock </StyledRockName>
           </StyledNamesDiv>
         </StyledLink>
 
-        <StyledLink className="link" to="/steel-type">
+        <StyledLink className="link" href="/steel-type">
           <StyledNamesDiv>
             <StyledIcon src={Steel} alt="steel type icon" />
             <StyledSteelName> Steel </StyledSteelName>
           </StyledNamesDiv>
         </StyledLink>
 
-        <StyledLink className="link" to="/water-type">
+        <StyledLink className="link" href="/water-type">
           <StyledNamesDiv>
             <StyledIcon src={Water} alt="water type icon" />
             <StyledWaterName> Water </StyledWaterName>
