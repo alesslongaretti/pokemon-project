@@ -16,10 +16,30 @@ const StyledName = styled.h3`
 `;
 
 const StyledIcon = styled.img`
-  width: 20%;
-  margin-top: 20px;
+  width: 8em;
+  margin: 3%;
   border-radius: 50%;
-  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
+  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+`;
+
+const StyledPsychicName = styled.h2`
+  color: #eb53e3;
+  width: 10em;
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
+`;
+
+const StyledNamesDiv = styled.div`
+  text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(1px 1px 2px #000);
+  position: relative;
+  text-align: center;
+  color: white;
 `;
 
 const StyledPic = styled.img`
@@ -58,7 +78,10 @@ const PsychicType = props => {
 
   return (
     <div>
-      <StyledIcon src={Psychic} alt="psychic type icon" />
+      <StyledNamesDiv>  
+        <StyledIcon src={Psychic} alt="psychic type icon" />
+        <StyledPsychicName>Psychic</StyledPsychicName>
+      </StyledNamesDiv>
       <StyledParagraph>
         Psychic-type attacks are super effective against Fighting-type and
         Poison-type Pokémon. However, they have no effect on Dark-type Pokémon.

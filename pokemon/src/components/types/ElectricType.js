@@ -15,13 +15,6 @@ const StyledName = styled.h3`
   -webkit-filter: drop-shadow(1px 1px 3px #000000); filter: drop-shadow(1px 1px 3px #000000);
 `;
 
-const StyledIcon = styled.img`
-  width: 20%;
-  margin-top: 20px;
-  border-radius: 50%;
-  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
-`;
-
 const StyledPic = styled.img`
   margin: -15px;
   -webkit-filter: drop-shadow(1px 1px 3px #000000); filter: drop-shadow(1px 1px 3px #000000);
@@ -51,6 +44,33 @@ const StyledContainer = styled.div`
   flex-wrap: wrap;
 `;
 
+const StyledIcon = styled.img`
+  width: 8em;
+  margin: 3%;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+`;
+
+const StyledElectricName = styled.h2`
+color: #fbf384;
+  width: 10em;
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
+`;
+
+const StyledNamesDiv = styled.div`
+  text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(1px 1px 2px #000);
+  position: relative;
+  text-align: center;
+  color: white;
+`;
+
 const ElectricType = (props) => {
 
   if (props.pokemonData[0] === undefined) {
@@ -58,7 +78,10 @@ const ElectricType = (props) => {
   }
   return (
     <div>
-      <StyledIcon src={Electric} alt="electric type icon" />
+      <StyledNamesDiv>  
+        <StyledIcon src={Electric} alt="electric type icon" />
+        <StyledElectricName>Electric</StyledElectricName>
+      </StyledNamesDiv>
       <StyledParagraph>
         Electric-type moves are super effective against Water and Flying-type
         Pokémon. Pokémon that belong to this type are immune to paralysis. As
