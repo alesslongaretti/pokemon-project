@@ -1,3 +1,5 @@
 body {
+    font-size: 14px;
+    line-height: 1;
     background: linear-gradient(270deg, rgba(231,201,0,1) 0%, rgba(255,226,29,1) 50%, rgba(255,242,150,1) 100%);
 }
