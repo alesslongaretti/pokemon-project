@@ -15,13 +15,6 @@ const StyledName = styled.h3`
   -webkit-filter: drop-shadow(1px 1px 3px #000000); filter: drop-shadow(1px 1px 3px #000000);
 `;
 
-const StyledIcon = styled.img`
-  width: 20%;
-  margin-top: 20px;
-  border-radius: 50%;
-  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
-`;
-
 const StyledPic = styled.img`
   margin: -15px;
   -webkit-filter: drop-shadow(1px 1px 3px #000000); filter: drop-shadow(1px 1px 3px #000000);
@@ -51,6 +44,33 @@ const StyledContainer = styled.div`
   flex-wrap: wrap;
 `;
 
+const StyledIcon = styled.img`
+  width: 8em;
+  margin: 3%;
+  border-radius: 50%;
+  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+`;
+
+const StyledBugName = styled.h2`
+  color: #99ce58;
+  width: 10em;
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
+`;
+
+const StyledNamesDiv = styled.div`
+  text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(1px 1px 2px #000);
+  position: relative;
+  text-align: center;
+  color: white;
+`;
+
 const BugType = props => {
   if (props.pokemonData[0] === undefined) {
     props.pokemonData.splice(0);
@@ -58,7 +78,10 @@ const BugType = props => {
 
   return (
     <div>
-      <StyledIcon src={Bug} alt="bug type icon" />
+      <StyledNamesDiv>  
+        <StyledIcon src={Bug} alt="bug type icon" />
+        <StyledBugName>Bug</StyledBugName>
+      </StyledNamesDiv>
       <StyledParagraph>
         The Bug type is mostly recognized by having early evolutions, with 3
         triple-stage evolution families in this type sharing a record of the

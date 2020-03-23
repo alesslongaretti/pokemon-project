@@ -49,6 +49,8 @@ const StyledBugName = styled.h2`
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
 `;
 
 const StyledDragonName = styled.h2`
@@ -58,6 +60,8 @@ const StyledDragonName = styled.h2`
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
 `;
 
 const StyledElectricName = styled.h2`
@@ -67,6 +71,8 @@ const StyledElectricName = styled.h2`
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
 `;
 
 const StyledFairyName = styled.h2`
@@ -76,6 +82,8 @@ const StyledFairyName = styled.h2`
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
 `;
 
 const StyledFightingName = styled.h2`
@@ -85,6 +93,8 @@ const StyledFightingName = styled.h2`
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
 `;
 
 const StyledFireName = styled.h2`
@@ -94,6 +104,8 @@ const StyledFireName = styled.h2`
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
 `;
 
 const StyledFlyingName = styled.h2`
@@ -103,6 +115,8 @@ const StyledFlyingName = styled.h2`
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
 `;
 
 const StyledGhostName = styled.h2`
@@ -112,6 +126,8 @@ const StyledGhostName = styled.h2`
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
 `;
 
 const StyledGrassName = styled.h2`
@@ -121,6 +137,8 @@ const StyledGrassName = styled.h2`
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
 `;
 
 const StyledGroundName = styled.h2`
@@ -130,6 +148,8 @@ const StyledGroundName = styled.h2`
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
 `;
 
 const StyledIceName = styled.h2`
@@ -139,6 +159,8 @@ const StyledIceName = styled.h2`
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
 `;
 
 const StyledNormalName = styled.h2`
@@ -148,6 +170,8 @@ const StyledNormalName = styled.h2`
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
 `;
 
 const StyledPoisonName = styled.h2`
@@ -157,6 +181,8 @@ const StyledPoisonName = styled.h2`
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
 `;
 
 const StyledPsychicName = styled.h2`
@@ -166,6 +192,8 @@ const StyledPsychicName = styled.h2`
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
 `;
 
 const StyledRockName = styled.h2`
@@ -175,6 +203,8 @@ const StyledRockName = styled.h2`
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
 `;
 
 const StyledSteelName = styled.h2`
@@ -184,6 +214,8 @@ const StyledSteelName = styled.h2`
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
 `;
 
 const StyledWaterName = styled.h2`
@@ -193,6 +225,8 @@ const StyledWaterName = styled.h2`
   top: 30%;
   left: 50%;
   transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
 `;
 
 const StyledHeader = styled.img`

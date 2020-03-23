@@ -16,10 +16,30 @@ const StyledName = styled.h3`
 `;
 
 const StyledIcon = styled.img`
-  width: 20%;
-  margin-top: 20px;
+  width: 8em;
+  margin: 3%;
   border-radius: 50%;
-  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
+  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+`;
+
+const StyledSteelName = styled.h2`
+  color: #a29d99;
+  width: 10em;
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
+`;
+
+const StyledNamesDiv = styled.div`
+  text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(1px 1px 2px #000);
+  position: relative;
+  text-align: center;
+  color: white;
 `;
 
 const StyledPic = styled.img`
@@ -58,7 +78,10 @@ const SteelType = props => {
 
   return (
     <div>
-      <StyledIcon src={Steel} alt="steel type icon" />
+      <StyledNamesDiv>  
+        <StyledIcon src={Steel} alt="steel type icon" />
+        <StyledSteelName>Steel</StyledSteelName>
+      </StyledNamesDiv>
       <StyledParagraph>
         Reflecting the indestructible nature of metal, the Steel type features
         the greatest defenses of all types, resisting 10 out of 18 types, in

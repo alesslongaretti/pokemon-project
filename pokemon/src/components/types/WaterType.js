@@ -16,10 +16,30 @@ const StyledName = styled.h3`
 `;
 
 const StyledIcon = styled.img`
-  width: 20%;
-  margin-top: 20px;
+  width: 8em;
+  margin: 3%;
   border-radius: 50%;
-  box-shadow: 10px 10px 30px 0px rgba(0,0,0,0.9);
+  box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
+`;
+
+const StyledWaterName = styled.h2`
+  color: #4478e5;
+  width: 10em;
+  position: absolute;
+  top: 36%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(3px 3px 4px #000);
+`;
+
+const StyledNamesDiv = styled.div`
+  text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
+  -webkit-filter: drop-shadow(1px 1px 2px #000);
+  filter: drop-shadow(1px 1px 2px #000);
+  position: relative;
+  text-align: center;
+  color: white;
 `;
 
 const StyledPic = styled.img`
@@ -58,7 +78,10 @@ const WaterType = props => {
 
   return (
     <div>
-      <StyledIcon src={Water} alt="water type icon" />
+      <StyledNamesDiv>  
+        <StyledIcon src={Water} alt="water type icon" />
+        <StyledWaterName>Water</StyledWaterName>
+      </StyledNamesDiv>
       <StyledParagraph>
         The Water type is a very balanced type, as well as being the most common
         out of the 18 types. Water-type Pokémon are super effective against
