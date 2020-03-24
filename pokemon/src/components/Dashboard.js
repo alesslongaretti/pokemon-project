@@ -4,7 +4,7 @@ import { connect } from "react-redux";
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
-  margin: 5%;
+  margin: 8% 5% 5% 5%;
 `;
 
 const StyledImg = styled.img`
@@ -78,6 +78,7 @@ const Dashboard = props => {
 
   return (
     <StyledDiv className="headers">
+      <div>
       <h1>Welcome To The Pokemon Database!</h1>
       <StyledImg src={PokemonLogo} alt="pokemons" />
       <StyledContainer>
@@ -109,6 +110,7 @@ const Dashboard = props => {
             )};
           })}
       </StyledContainer>
+      </div>
     </StyledDiv>
   );
 };
