@@ -98,7 +98,7 @@ const StyledFightingName = styled.h2`
 `;
 
 const StyledFireName = styled.h2`
-  color: #e63333;
+  color: #ff6666;
   width: 10em;
   position: absolute;
   top: 30%;
@@ -120,7 +120,7 @@ const StyledFlyingName = styled.h2`
 `;
 
 const StyledGhostName = styled.h2`
-  color: #827a9f;
+  color: #aca6bf;
   width: 10em;
   position: absolute;
   top: 30%;
@@ -175,7 +175,7 @@ const StyledNormalName = styled.h2`
 `;
 
 const StyledPoisonName = styled.h2`
-  color: #b041d8;
+  color: #c75eed;
   width: 10em;
   position: absolute;
   top: 30%;
@@ -186,7 +186,7 @@ const StyledPoisonName = styled.h2`
 `;
 
 const StyledPsychicName = styled.h2`
-  color: #eb53e3;
+  color: #ef76e9;
   width: 10em;
   position: absolute;
   top: 30%;
@@ -197,7 +197,7 @@ const StyledPsychicName = styled.h2`
 `;
 
 const StyledRockName = styled.h2`
-  color: #d09c6d;
+  color: #dab08b;
   width: 10em;
   position: absolute;
   top: 30%;
@@ -208,7 +208,7 @@ const StyledRockName = styled.h2`
 `;
 
 const StyledSteelName = styled.h2`
-  color: #a29d99;
+  color: #dbd9d7;
   width: 10em;
   position: absolute;
   top: 30%;
@@ -219,7 +219,7 @@ const StyledSteelName = styled.h2`
 `;
 
 const StyledWaterName = styled.h2`
-  color: #4478e5;
+  color: #4d85ff;
   width: 10em;
   position: absolute;
   top: 30%;

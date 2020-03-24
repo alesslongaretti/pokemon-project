@@ -5,7 +5,15 @@ import { connect } from "react-redux";
 
 const StyledParagraph = styled.p`
   font-size: 18px;
-  text-align: center;
+  line-height: 1.2;
+  font-weight: 450;
+  text-align: justify;
+  width: 85%;
+  padding: 15px 20px 15px;
+  margin: 10px auto;
+  background: linear-gradient(90deg, rgba(255,237,229,1) 0%, rgba(255,229,217,1) 50%, rgba(255,215,196,1) 100%);
+  border: 3px solid #e5b380; 
+  box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.7);
 `;
 
 const StyledName = styled.h3`
@@ -17,7 +25,7 @@ const StyledName = styled.h3`
 
 const StyledIcon = styled.img`
   width: 8em;
-  margin: 3%;
+  margin: 40px;
   border-radius: 50%;
   box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
 `;
@@ -26,7 +34,7 @@ const StyledGroundName = styled.h2`
   color: #f5c7a3;
   width: 10em;
   position: absolute;
-  top: 36%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-filter: drop-shadow(1px 1px 2px #000);
@@ -54,7 +62,7 @@ const StyledInfo = styled.p`
 `;
 
 const StyledCard = styled.div`
-  margin: 2%;
+  margin: 2% 2% 5%;
   width: 10em;
   background: linear-gradient(180deg, rgba(53,66,171,1) 0%, rgba(66,84,221,1) 50%, rgba(99,117,255,1) 100%);
   border: 5px solid;
@@ -67,7 +75,7 @@ const StyledCard = styled.div`
 const StyledContainer = styled.div`
   display: flex;
   justify-content: space-around;
-  margin: 1% 0%;
+  margin: 40px 0% 20px;
   flex-wrap: wrap;
 `;
 
