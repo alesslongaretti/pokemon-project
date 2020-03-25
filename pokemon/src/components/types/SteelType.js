@@ -39,7 +39,7 @@ const StyledInfo = styled.p`
 `;
 
 const StyledCard = styled.div`
-  margin: 2% 2% 5%;
+  margin: 2% 10% 5%;
   padding-bottom: 2px;
   width: 16em;
   background: linear-gradient(180deg, rgba(53,66,171,1) 0%, rgba(66,84,221,1) 50%, rgba(99,117,255,1) 100%);
@@ -53,7 +53,7 @@ const StyledCard = styled.div`
 const StyledContainer = styled.div`
   display: flex;
   width: 90%;
-  justify-content: space-around;
+  justify-content: center;
   margin: 40px auto 20px;
   flex-wrap: wrap;
 `;
