@@ -4,12 +4,13 @@ import styled from 'styled-components';
 import { connect } from "react-redux";
 
 const StyledParagraph = styled.p`
-  font-size: 18px;
+  font-size: 22px;
   line-height: 1.2;
   font-weight: 450;
   text-align: justify;
-  width: 85%;
-  padding: 15px 20px 15px;
+  width: 84%;
+  box-sizing: border-box;
+  padding: 30px 40px 30px;
   margin: 10px auto;
   background: linear-gradient(90deg, rgba(255,135,135,1) 0%, rgba(255,108,108,1) 50%, rgba(255,95,95,1) 100%);
   border: 3px solid #881111; 
@@ -17,6 +18,7 @@ const StyledParagraph = styled.p`
 `;
 
 const StyledName = styled.h3`
+  font-size: 1.7em;
   text-transform: capitalize;
   color: #FFDE00;
   text-shadow: -1px -1px #3B4CCA, 1px -1px #3B4CCA, -1px 1px #3B4CCA, 1px 1px #3B4CCA;
@@ -25,10 +27,12 @@ const StyledName = styled.h3`
 
 const StyledPic = styled.img`
   margin: -15px;
+  width: 150px;
   -webkit-filter: drop-shadow(1px 1px 3px #000000); filter: drop-shadow(1px 1px 3px #000000);
 `;
 
 const StyledInfo = styled.p`
+  font-size: 1.5em;
   color: white;
   text-shadow: -1px -1px #3B4CCA, 1px -1px #3B4CCA, -1px 1px #3B4CCA, 1px 1px #3B4CCA;
   -webkit-filter: drop-shadow(1px 1px 1px #000000); filter: drop-shadow(1px 1px 1px #000000);
@@ -36,7 +40,8 @@ const StyledInfo = styled.p`
 
 const StyledCard = styled.div`
   margin: 2% 2% 5%;
-  width: 10em;
+  padding-bottom: 2px;
+  width: 16em;
   background: linear-gradient(180deg, rgba(53,66,171,1) 0%, rgba(66,84,221,1) 50%, rgba(99,117,255,1) 100%);
   border: 5px solid;
   border-image-source: linear-gradient(#ffffff, #e6e6e6);
@@ -47,19 +52,20 @@ const StyledCard = styled.div`
 
 const StyledContainer = styled.div`
   display: flex;
+  width: 90%;
   justify-content: space-around;
-  margin: 40px 0% 20px;
+  margin: 40px auto 20px;
   flex-wrap: wrap;
 `;
 
 const StyledIcon = styled.img`
-  width: 8em;
+  width: 12em;
   margin: 40px;
   border-radius: 50%;
   box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
 `;
 
-const StyledFireName = styled.h2`
+const StyledFireName = styled.h1`
   color: #ff6666;
   width: 10em;
   position: absolute;
