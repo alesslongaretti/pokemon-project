@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
-  margin: 60px;
+  margin: 4%;
 `;
 
 const StyledLinksDiv = styled.div`
@@ -268,7 +268,7 @@ const SearchByType = props => {
   return (
     <StyledDiv className="headers">
       <div>
-        <StyledHeader>Search Pokemon By Type:</StyledHeader>
+        <StyledHeader>Search Pokemon By Type</StyledHeader>
       </div>
     <StyledContainer>
       <StyledLinksDiv>
