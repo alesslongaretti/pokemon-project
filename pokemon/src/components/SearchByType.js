@@ -251,7 +251,7 @@ const StyledContainer = styled.div`
   flex-wrap: wrap;
   margin: 6% 5%;
   background: linear-gradient(
-    180deg,
+    270deg,
     rgba(53, 66, 171, 1) 0%,
     rgba(66, 84, 221, 1) 50%,
     rgba(99, 117, 255, 1) 100%
