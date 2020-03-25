@@ -20,13 +20,13 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
-  margin: 5%;
+  margin: 60px;
 `;
 
 const StyledLinksDiv = styled.div`
   display: flex;
   justify-content: space-around;
-  margin: 5% 0%;
+  margin: 30px 30px;
   flex-wrap: wrap;
 `;
 
@@ -37,202 +37,204 @@ const StyledLink = styled.a`
 `;
 
 const StyledIcon = styled.img`
-  width: 8em;
+  width: 12em;
   border-radius: 50%;
   box-shadow: 10px 10px 30px 0px rgba(0, 0, 0, 0.5);
 `;
 
-const StyledBugName = styled.h2`
+const StyledBugName = styled.h1`
   color: #99ce58;
   width: 10em;
   position: absolute;
-  top: 30%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-filter: drop-shadow(1px 1px 2px #000);
   filter: drop-shadow(3px 3px 4px #000);
 `;
 
-const StyledDragonName = styled.h2`
+const StyledDragonName = styled.h1`
   color: #8e9fd3;
   width: 10em;
   position: absolute;
-  top: 30%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-filter: drop-shadow(1px 1px 2px #000);
   filter: drop-shadow(3px 3px 4px #000);
 `;
 
-const StyledElectricName = styled.h2`
+const StyledElectricName = styled.h1`
   color: #fbf384;
   width: 10em;
   position: absolute;
-  top: 30%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-filter: drop-shadow(1px 1px 2px #000);
   filter: drop-shadow(3px 3px 4px #000);
 `;
 
-const StyledFairyName = styled.h2`
+const StyledFairyName = styled.h1`
   color: #f9bef5;
   width: 10em;
   position: absolute;
-  top: 30%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-filter: drop-shadow(1px 1px 2px #000);
   filter: drop-shadow(3px 3px 4px #000);
 `;
 
-const StyledFightingName = styled.h2`
+const StyledFightingName = styled.h1`
   color: #f17942;
   width: 10em;
   position: absolute;
-  top: 30%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-filter: drop-shadow(1px 1px 2px #000);
   filter: drop-shadow(3px 3px 4px #000);
 `;
 
-const StyledFireName = styled.h2`
+const StyledFireName = styled.h1`
   color: #ff6666;
   width: 10em;
   position: absolute;
-  top: 30%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-filter: drop-shadow(1px 1px 2px #000);
   filter: drop-shadow(3px 3px 4px #000);
 `;
 
-const StyledFlyingName = styled.h2`
+const StyledFlyingName = styled.h1`
   color: #b0f7ef;
   width: 10em;
   position: absolute;
-  top: 30%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-filter: drop-shadow(1px 1px 2px #000);
   filter: drop-shadow(3px 3px 4px #000);
 `;
 
-const StyledGhostName = styled.h2`
+const StyledGhostName = styled.h1`
   color: #aca6bf;
   width: 10em;
   position: absolute;
-  top: 30%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-filter: drop-shadow(1px 1px 2px #000);
   filter: drop-shadow(3px 3px 4px #000);
 `;
 
-const StyledGrassName = styled.h2`
+const StyledGrassName = styled.h1`
   color: #00cc00;
   width: 10em;
   position: absolute;
-  top: 30%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-filter: drop-shadow(1px 1px 2px #000);
   filter: drop-shadow(3px 3px 4px #000);
 `;
 
-const StyledGroundName = styled.h2`
+const StyledGroundName = styled.h1`
   color: #f5c7a3;
   width: 10em;
   position: absolute;
-  top: 30%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-filter: drop-shadow(1px 1px 2px #000);
   filter: drop-shadow(3px 3px 4px #000);
 `;
 
-const StyledIceName = styled.h2`
+const StyledIceName = styled.h1`
   color: #a1f0f0;
   width: 10em;
   position: absolute;
-  top: 30%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-filter: drop-shadow(1px 1px 2px #000);
   filter: drop-shadow(3px 3px 4px #000);
 `;
 
-const StyledNormalName = styled.h2`
+const StyledNormalName = styled.h1`
   color: #bec2c2;
   width: 10em;
   position: absolute;
-  top: 30%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-filter: drop-shadow(1px 1px 2px #000);
   filter: drop-shadow(3px 3px 4px #000);
 `;
 
-const StyledPoisonName = styled.h2`
+const StyledPoisonName = styled.h1`
   color: #c75eed;
   width: 10em;
   position: absolute;
-  top: 30%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-filter: drop-shadow(1px 1px 2px #000);
   filter: drop-shadow(3px 3px 4px #000);
 `;
 
-const StyledPsychicName = styled.h2`
+const StyledPsychicName = styled.h1`
   color: #ef76e9;
   width: 10em;
   position: absolute;
-  top: 30%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-filter: drop-shadow(1px 1px 2px #000);
   filter: drop-shadow(3px 3px 4px #000);
 `;
 
-const StyledRockName = styled.h2`
+const StyledRockName = styled.h1`
   color: #dab08b;
   width: 10em;
   position: absolute;
-  top: 30%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-filter: drop-shadow(1px 1px 2px #000);
   filter: drop-shadow(3px 3px 4px #000);
 `;
 
-const StyledSteelName = styled.h2`
+const StyledSteelName = styled.h1`
   color: #dbd9d7;
   width: 10em;
   position: absolute;
-  top: 30%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-filter: drop-shadow(1px 1px 2px #000);
   filter: drop-shadow(3px 3px 4px #000);
 `;
 
-const StyledWaterName = styled.h2`
+const StyledWaterName = styled.h1`
   color: #4d85ff;
   width: 10em;
   position: absolute;
-  top: 30%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-filter: drop-shadow(1px 1px 2px #000);
   filter: drop-shadow(3px 3px 4px #000);
 `;
 
-const StyledHeader = styled.img`
-  width: 90%;
-  -webkit-filter: drop-shadow(5px 5px 5px #000);
-  filter: drop-shadow(3px 3px 3px #000);
+const StyledHeader = styled.h1`
+  color: white;
+  font-size: 35px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #3b4cca;
+  filter: drop-shadow(5px 5px 5px black);
 `;
 
 const StyledNamesDiv = styled.div`
@@ -244,16 +246,31 @@ const StyledNamesDiv = styled.div`
   color: white;
 `;
 
+const StyledContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin: 6% 5%;
+  background: linear-gradient(
+    180deg,
+    rgba(53, 66, 171, 1) 0%,
+    rgba(66, 84, 221, 1) 50%,
+    rgba(99, 117, 255, 1) 100%
+  );
+  border: 5px solid;
+  border-image-source: linear-gradient(#ffffff, #e6e6e6);
+  border-image-slice: 1;
+  border-image-radius: 10px;
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.7),
+    inset 5px 5px 20px 0px rgba(0, 0, 0, 0.7);
+`;
+
 const SearchByType = props => {
   return (
     <StyledDiv className="headers">
       <div>
-        <StyledHeader
-          src="https://fontmeme.com/permalink/200316/752d21e33c2682ba029d3ef3f87fd818.png"
-          alt="pokemon-font"
-          border="0"
-        />
+        <StyledHeader>Search Pokemon By Type:</StyledHeader>
       </div>
+    <StyledContainer>
       <StyledLinksDiv>
         <StyledLink className="link" href="/bug-type">
           <StyledNamesDiv>
@@ -374,6 +391,7 @@ const SearchByType = props => {
           </StyledNamesDiv>
         </StyledLink>
       </StyledLinksDiv>
+      </StyledContainer>
     </StyledDiv>
   );
 };
