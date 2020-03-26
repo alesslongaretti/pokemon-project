@@ -87,12 +87,12 @@ const StyledTypes = styled.div`
 
 const StyledType = styled.p`
   text-transform: capitalize;
-  margin: -3px 1px 15px;
+  margin: -3px 5px 15px;
   padding: 8px 16px 10px;
-  border: 0.3px solid #000;
+  border: 0.5px solid white;
   border-radius: 15px;
   font-size: 1.2em;
-  width: 30%;
+  width: 25%;
   background: ${props =>
     props.bug
       ? "#99ce58"
@@ -127,7 +127,7 @@ const StyledType = styled.p`
       : props.steel
       ? "#a29d99"
       : props.water
-      ? "#4478e5"
+      ? "#3D6CCE"
       : "black"};
 `;
 
