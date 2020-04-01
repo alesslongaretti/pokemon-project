@@ -16,7 +16,6 @@ import Psychic from "../Images/Psychic.png";
 import Rock from "../Images/Rock.png";
 import Steel from "../Images/Steel.png";
 import Water from "../Images/Water.png";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
@@ -34,6 +33,9 @@ const StyledLink = styled.a`
   margin: 3%;
   display: block;
   text-decoration: none;
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const StyledIcon = styled.img`

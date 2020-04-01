@@ -57,6 +57,10 @@ const StyledCard = styled.div`
   border-image-radius: 10px;
   box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.7),
     inset 5px 5px 20px 0px rgba(0, 0, 0, 0.7);
+    &:hover {
+     transform: scale(1.1);
+     cursor:pointer;
+    }
 `;
 
 const StyledPic = styled.img`
@@ -146,7 +150,7 @@ const Dashboard = props => {
             props.pokemonData.map((pokemon, i) => {
               if (pokemon.types[1]) {
                 return (
-                  <StyledCard key={i}>
+                  <StyledCard className="styled"key={i}>
                     <StyledName>{pokemon.name}</StyledName>
                     <StyledPic src={pokemon.picture} alt="pokemon" />
                     <StyledInfo>
