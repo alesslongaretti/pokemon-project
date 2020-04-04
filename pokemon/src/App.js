@@ -19,6 +19,7 @@ import WaterType from './components/types/WaterType';
 import Dashboard from './components/Dashboard';
 import SearchByType from './components/SearchByType';
 import Navigation from './components/Navigation';
+import Footer from './components/Footer';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import './App.css';
 
@@ -54,6 +55,7 @@ const App = props => {
         <Route exact path="/steel-type" component={SteelType} />
         <Route exact path="/water-type" component={WaterType} />
       </Switch>
+      <Footer />
     </Router>
   );
 }
