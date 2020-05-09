@@ -9,7 +9,7 @@ const StyledLink = styled(Link)`
     1px 1px #3b4cca;
   -webkit-filter: drop-shadow(1px 1px 2px #000);
   filter: drop-shadow(1px 1px 2px #000);
-  font-size: 18px;
+  font-size: 20px;
   margin: 5%;
 `;
 
