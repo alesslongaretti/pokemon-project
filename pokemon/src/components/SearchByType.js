@@ -229,13 +229,13 @@ const StyledWaterName = styled.h1`
   filter: drop-shadow(3px 3px 4px #000);
 `;
 
-const StyledHeader = styled.h1`
-  color: white;
-  font-size: 35px;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #3b4cca;
-  filter: drop-shadow(5px 5px 5px black);
-`;
+// const StyledHeader = styled.h1`
+//   color: white;
+//   font-size: 35px;
+//   -webkit-text-stroke-width: 1px;
+//   -webkit-text-stroke-color: #3b4cca;
+//   filter: drop-shadow(5px 5px 5px black);
+// `;
 
 const StyledNamesDiv = styled.div`
   text-shadow: -1px -1px #000, 1px -1px #000, -1px 1px #000, 1px 1px #000;
@@ -267,9 +267,9 @@ const StyledContainer = styled.div`
 const SearchByType = props => {
   return (
     <StyledDiv className="headers">
-      <div>
+      {/* <div>
         <StyledHeader>Search Pokemon By Type</StyledHeader>
-      </div>
+      </div> */}
     <StyledContainer>
       <StyledLinksDiv>
         <StyledLink className="link" href="/bug-type">
