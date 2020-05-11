@@ -38,6 +38,10 @@ const StyledCard = styled.div`
   border-image-radius: 10px;
   box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.7),
     inset 5px 5px 20px 0px rgba(0, 0, 0, 0.7);
+    &:hover {
+     transform: scale(1.1);
+     cursor:pointer;
+    }
 `;
 
 const StyledPic = styled.img`
@@ -68,12 +72,12 @@ const StyledTypes = styled.div`
 
 const StyledType = styled.p`
   text-transform: capitalize;
-  margin: -3px 1px 15px;
+  margin: -3px 5px 15px;
   padding: 8px 16px 10px;
-  border: 0.3px solid #000;
+  border: 0.5px solid white;
   border-radius: 15px;
   font-size: 1.2em;
-  width: 30%;
+  width: 25%;
   background: ${props =>
     props.bug
       ? "#99ce58"
@@ -108,7 +112,7 @@ const StyledType = styled.p`
       : props.steel
       ? "#a29d99"
       : props.water
-      ? "#4478e5"
+      ? "#3D6CCE"
       : "black"};
 `;
 
@@ -126,7 +130,7 @@ const Dashboard = props => {
             props.pokemonData.map((pokemon, i) => {
               if (pokemon.types[1]) {
                 return (
-                  <StyledCard key={i}>
+                  <StyledCard className="styled"key={i}>
                     <StyledName>{pokemon.name}</StyledName>
                     <StyledPic src={pokemon.picture} alt="pokemon" />
                     <StyledInfo>
